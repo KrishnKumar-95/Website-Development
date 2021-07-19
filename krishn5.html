@@ -28,7 +28,7 @@
             reset :- this will reset the form fields.
             we just have to type << input:type >> and hit enter this will autocomplete.
             label :- label is the name for the text field and it accepts the id of input field in for="id of input field"
-            select :- select tag creates a dropdown list of <<option>> tag which contains list items
+            select :- select tag creates a dropdown list of <<option>> tag which contains list items use <<selected>> attribute to choose a bydefault option
     -->
 
     <form action="backend.php">
@@ -78,6 +78,7 @@
             <br>
             <textarea name="myText" cols="30" rows="10" id="description"></textarea>
         </div>
+        <br>
         <div>
             <label for="car"> Select Car :</label>
             <select name="mycar" id="car">
