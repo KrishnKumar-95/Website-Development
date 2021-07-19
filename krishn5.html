@@ -24,42 +24,73 @@
             number:- makes number column which is a type of drop down list
             date :- it shows a box containing calender
             checkbox :- it shows a checkbox
-            radio :- to select one option between more
-
+            radio :- to select one option between more but name of both must be same if you   want to check one of these.
+            reset :- this will reset the form fields.
+            we just have to type << input:type >> and hit enter this will autocomplete.
+            label :- label is the name for the text field and it accepts the id of input field in for="id of input field"
+            select :- select tag creates a dropdown list of <<option>> tag which contains list items
     -->
 
     <form action="backend.php">
         <div>
-            Name : <input type="text" name="myName">
+            <label for="name"> Name</label>
+            <input type="text" name="myName" id="name">
         </div>
         <br>
         <div>
-            Employee ID : <input type="text" name="myID">
+            <label for="id"> Employee ID</label>
+            <input type="text" name="myID" id="id">
         </div>
         <br>
         <div>
-            Gender : Male <input type="radio" name="myGender"> Female <input type="radio" name="myGender">
+            Gender : <label for="male"> Male</label><input type="radio" name="myGender" id="male"> <label for="female"> Female</label> <input type="radio" name="myGender" id="female">
         </div>
         <br>
         <div>
-            Employee Role : <input type="text" name="myRole">
+            <label for="role"> Employee Role</label>
+            <input type="text" name="myRole" id="role">
         </div>
         <br>
         <div>
-            Email : <input type="email" name="myEmail">
-        </div>
-        <br>
-        <input type="submit" value="submit">
-        <div>
-            Select date : <input type="date" name="myDate">
-        </div>
-        <div>
-            Bonus : <input type="number" name="myBonus">
+            <label for="email"> Email</label>
+            <input type="email" name="myEmail" id="email">
         </div>
         <br>
         <div>
-            Are you Eligible? : <input type="checkbox" name="myEligibility">
+            <label for="date"> Select date</label>
+            <input type="date" name="myDate" id="date">
         </div>
+        <br>
+        <div>
+            <label for="bonus"> Bonus</label>
+            <input type="number" name="myBonus" id="bonus">
+        </div>
+        <br>
+        <div>
+            <label for="eligibility"> Are you Eligible?</label>
+            <input type="checkbox" name="myEligibility" id="eligibility">
+        </div>
+        <br>
+
+        <!-- This text area is a blank field to write some text in the form -->
+        <div>
+            <label for="description"> Write about yourself</label>
+            <br>
+            <textarea name="myText" cols="30" rows="10" id="description"></textarea>
+        </div>
+        <div>
+            <label for="car"> Select Car :</label>
+            <select name="mycar" id="car">
+            <option value="ind">Indica</option>
+            <option value="swf" selected>Swift</option>
+            <option value="bol">Bolero</option>
+            <option value="polo">Polo</option>
+            <option value="vent">Vento</option>
+        </select>
+        </div>
+        <br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset Now">
     </form>
 
 </body>
