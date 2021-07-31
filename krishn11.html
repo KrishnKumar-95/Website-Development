@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selector</title>
+    <!-- We are using Internal CSS we can also use external CSS -->
+    <style>
+        /* selector { property : value } */
+        /* This is will apply to all the same tags */
+        /* We can also use tag id to use style in only 1 tag */
+        /* #secondColor {
+            color: red;
+        } */
+        /* Class Selector */
+        
+        .redElement {
+            color: red;
+        }
+        /* Class Selector */
+        
+        .bgText {
+            background-color: yellow;
+        }
+        /* ID selector */
+        
+        #blueElement {
+            color: rgb(7, 7, 61);
+        }
+        /* simple selector */
+        
+        h3 {
+            color: green;
+        }
+        /* grouping selector */
+        
+        footer,
+        span {
+            color: yellow;
+            background-color: rgb(32, 32, 126);
+        }
+        /* This makes the border around selected tag of selected color */
+        
+        p {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>CSS Selectors</h3>
+
+    <!-- This is the use of ID to identify the tag in which the property will be applied This ID must be unique -->
+
+    <p id="secondColor" class="redElement bgText">THis is Simple Paragraph which i am using for experiment</p>
+
+    <p id="blueElement">This is Another Paragraph which i am writing for experiment</p>
+
+    <span>This is span i am using this for grouping with footer</span>
+    <footer>This is footer i am using this for grouping with span</footer>
+</body>
+
+</html>
