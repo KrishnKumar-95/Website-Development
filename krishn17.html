@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <title>Alignment</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        .container {
+            width: 900px;
+            border: 3px solid navy;
+            /* this will make the box in Center */
+            /* 33px is the top margin */
+            margin: 33px auto;
+        }
+        
+        .items {
+            border: 3px solid crimson;
+            margin: 12px 3px;
+            padding: 12px 3px;
+            background-color: rgb(250, 250, 120);
+        }
+        
+        body {
+            background-color: rgb(255, 220, 220);
+            font-family: 'Ubuntu', 'Times New Roman', sans-serif;
+        }
+        
+        #fruit {
+            float: left;
+            width: 48%;
+        }
+        
+        #computer {
+            float: right;
+            width: 48%;
+        }
+        
+        #stationary {
+            /* <<clear: left;>> means that no left floating element will overlap it
+            and <<clear: both;>> is for both left and right */
+            clear: both;
+            width: 99.35%;
+        }
+        
+        p,
+        h3 {
+            /* we can use this property to make change in related tags */
+            /* text-align: left;
+            text-align: center;
+            text-align: right; */
+            text-align: justify;
+        }
+        
+        h1 {
+            /* i used width with margin auto because heading tags cover full line so i fix width then this will fit in center and both margin will be equal from both side */
+            /* margin: auto;
+            width: 355px;
+            font-weight: bold; */
+            text-align: center;
+            line-height: 25%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to my Website</h1>
+        <div id="fruit" class="items">
+            <h3>Fruits</h3>
+            <p id="fruitsPara" class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. A corporis nobis veniam, vitae consectetur dolores delectus magni distinctio id voluptatem at doloribus modi animi nihil libero magnam aliquam dolore doloremque, quo ad harum est? Lorem,
+                ipsum dolor sit amet consectetur adipisicing elit. Enim quos quidem quo pariatur, cumque atque debitis, rem doloremque fuga molestiae in rerum assumenda facilis repellendus dolor ut similique delectus officiis eum voluptates suscipit?
+                Neque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores reprehenderit deleniti sequi quisquam neque dolor culpa. Dolore debitis, adipisci id ipsum modi, eos enim quidem nostrum nobis reiciendis consequuntur, molestias
+                totam quis earum? Eaque.
+            </p>
+        </div>
+
+        <div id="computer" class="items">
+            <h3>Computer</h3>
+            <p id="computerPara" class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. A corporis nobis veniam, vitae consectetur dolores delectus magni distinctio id voluptatem at doloribus modi animi nihil libero magnam aliquam dolore doloremque, quo ad harum est? Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Consequatur animi nisi rerum neque magnam dolor aliquam porro laboriosam inventore blanditiis officia, suscipit eum. Veritatis, unde beatae? Hic illo perspiciatis modi. Quam alias est
+                accusamus! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae harum consequuntur aliquam hic dicta quas facilis architecto repudiandae aspernatur, maxime nesciunt accusantium iusto impedit quaerat recusandae maiores magni,
+                pariatur placeat velit laborum ab molestias!
+            </p>
+        </div>
+
+        <div id="stationary" class="items">
+            <h3>Stationary</h3>
+            <p id="stationaryPara" class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. A corporis nobis veniam, vitae consectetur dolores delectus magni distinctio id voluptatem at doloribus modi animi nihil libero magnam aliquam dolore doloremque, quo ad harum est?</p>
+        </div>
+
+        <div id="glasses" class="items">
+            <h3>Glasses</h3>
+            <p id="glassesPara" class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. A corporis nobis veniam, vitae consectetur dolores delectus magni distinctio id voluptatem at doloribus modi animi nihil libero magnam aliquam dolore doloremque, quo ad harum est?</p>
+        </div>
+    </div>
+</body>
+
+</html>
