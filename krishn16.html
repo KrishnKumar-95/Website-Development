@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        * {
+            /* it will not change the width of box in case we increase margin/padding */
+            /* <*> is universal selector this will apply to all classses */
+            box-sizing: border-box;
+            /* by default margin and padding both will be 0 until we change the values below */
+            padding: 0px;
+            margin: 0px;
+        }
+        
+        body {
+            background-image: url("https://images.pexels.com/photos/257897/pexels-photo-257897.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+            background-repeat: no-repeat;
+        }
+        
+        .container {
+            background-color: transparent;
+            border: 3px solid black;
+            /* padding: 9px; */
+            /* padding from diff direction */
+            /* padding/margin order Top Right Bottom Left*/
+            /*padding: 23px 6px 56px 73px;*/
+            /* padding: top/bottom right/left; */
+            padding: 34px 19px;
+            margin: 14px 19px;
+            border-radius: 23px;
+            width: 533px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3>This is heading</h3>
+        <p id="first">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ullam enim sequi alias? Optio voluptatem ex quo! Sapiente provident quod totam commodi labore.</p>
+    </div>
+
+    <div class="container">
+        <h3>This is heading</h3>
+        <p id="second">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ullam enim sequi alias? Optio voluptatem ex quo! Sapiente provident quod totam commodi labore.</p>
+    </div>
+
+    <div class="container">
+        <h3>This is heading</h3>
+        <p id="third">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ullam enim sequi alias? Optio voluptatem ex quo! Sapiente provident quod totam commodi labore.</p>
+    </div>
+</body>
+
+</html>
