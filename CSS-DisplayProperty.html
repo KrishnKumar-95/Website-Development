@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Property</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        img {
+            width: 70px;
+            margin: auto;
+            display: block;
+        }
+        
+        header {
+            border: 2px solid white;
+            margin: auto;
+            width: 1200px;
+        }
+        
+        h3 {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin: 0px;
+            text-align: center;
+        }
+        
+        .box {
+            border: 2px solid white;
+            background-color: rgb(224, 224, 235);
+            margin: 4px 0px;
+            /* using this we can convert block element <p> to inline element by setting its width */
+            display: inline-block;
+            width: 33%;
+            padding: 23px;
+            box-sizing: border-box;
+        }
+        
+        .container {
+            margin: auto;
+            width: 1200px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="top">
+        <img src="https://www.codewithharry.com/assets/img/logo.png" alt="">
+        <h3>Welcome to Krishn's Blog</h3>
+    </header>
+    <div class="container">
+        <div class="box">
+            <h4 class="heading">This is Heading</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, natus. Blanditiis, saepe consequatur dolores accusamus vel iure, omnis perferendis ipsam facilis veritatis dolor esse commodi pariatur voluptas porro libero. Nihil dolorum sunt,
+                facere neque, delectus tempora, eligendi dolor ab aliquam aut eius modi esse?</p>
+        </div>
+        <div class="box">
+            <h4 class="heading">This is Heading</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, natus. Blanditiis, saepe consequatur dolores accusamus vel iure, omnis perferendis ipsam facilis veritatis dolor esse commodi pariatur voluptas porro libero. Nihil dolorum sunt,
+                facere neque, delectus tempora, eligendi dolor ab aliquam aut eius modi esse?</p>
+        </div>
+        <div class="box">
+            <h4 class="heading">This is Heading</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, natus. Blanditiis, saepe consequatur dolores accusamus vel iure, omnis perferendis ipsam facilis veritatis dolor esse commodi pariatur voluptas porro libero. Nihil dolorum sunt,
+                facere neque, delectus tempora, eligendi dolor ab aliquam aut eius modi esse?</p>
+        </div>
+    </div>
+</body>
+
+</html>
