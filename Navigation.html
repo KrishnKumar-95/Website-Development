@@ -8,7 +8,8 @@
     <title>Navigation</title>
     <style>
         .navbar {
-            background-color: darkslategrey;
+            background-color: black;
+            border-radius: 33px;
         }
         
         .navbar ul {
@@ -20,13 +21,33 @@
             float: left;
             /* this is for no-bullets */
             list-style: none;
-            margin: 13px 20px;
+            margin: 15px 20px;
         }
         
         .navbar li a {
             padding: 3px 3px;
             text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-size: 21.5px;
+        }
+        
+        .navbar li a:hover {
+            color: red;
+            /* color: red;
+            border-radius: 33px; */
+        }
+        
+        .search {
+            float: right;
             color: white;
+            padding: 15px 75px;
+        }
+        
+        .navbar input {
+            border: 2px solid black;
+            border-radius: 14px;
+            padding: 3px 17px;
+            width: 150px;
         }
     </style>
 </head>
@@ -39,6 +60,9 @@
                 <li><a href="">About</a></li>
                 <li><a href="">Services</a></li>
                 <li><a href="">Contact us</a></li>
+                <div class="search">
+                    <input type="text" name="search" id="search" placeholder="search in website">
+                </div>
             </ul>
         </nav>
     </header>
