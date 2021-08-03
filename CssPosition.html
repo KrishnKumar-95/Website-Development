@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* position : static(default), absolute, relative, fixed, sticky */
+        
+        .container {
+            border: 2px solid black;
+            background-color: burlywood;
+            height: 4000px;
+        }
+        
+        .box {
+            display: inline-block;
+            border: 2px solid red;
+            height: 100px;
+            width: 100px;
+        }
+        
+        #box3 {
+            /* In relative position element change its position according to its actual position
+            position: relative;*/
+            /* In absolute position element change its position according to its parent position */
+            /* position: absolute;
+            top: 34px;
+            left: 34px; */
+            /* position: fixed;
+            right: 10.5px; */
+            position: sticky;
+            top: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3</div>
+        <div class="box" id="box4">4</div>
+    </div>
+</body>
+
+</html>
