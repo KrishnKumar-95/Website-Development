@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility and Z-Index</title>
+</head>
+
+<style>
+    .box {
+        width: 170px;
+        height: 170px;
+        border: 2px solid black;
+        float: left;
+    }
+    
+    #box1 {
+        background-color: red;
+        position: relative;
+        left: 125px;
+        /* which element has greater z-index value will cover the element having smaller z-index value */
+        z-index: 3;
+    }
+    
+    #box2 {
+        /* it totally hides the element also its place will be covered by another element */
+        /* display: none; */
+        /* it hides the element but make the element place reserve */
+        /* visibility: hidden; */
+        background-color: blue;
+        position: relative;
+        left: 5px;
+        z-index: 2;
+    }
+    
+    #box3 {
+        background-color: green;
+    }
+    
+    #box4 {
+        background-color: yellow;
+    }
+</style>
+
+<body>
+    <div class="box" id="box1">1</div>
+    <div class="box" id="box2">2</div>
+    <div class="box" id="box3">3</div>
+    <div class="box" id="box4">4</div>
+</body>
+
+</html>
