@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox Tutorial</title>
+    <style>
+        .container {
+            height: 544px;
+            width: 100%;
+            border: 2px solid black;
+            display: flex;
+            /* bydefault flex-direction is right */
+            /* flex-direction: row; */
+            /* flex-direction column is enable the items to continue below one another in column */
+            /* flex-direction: column; */
+            /* flex-direction column-reverse items start from bottom and continue /* flex-direction column is enable the items to continue above one another */
+            /* flex-direction: column-reverse; */
+            /* elements start from right */
+            /* flex-direction: row-reverse; */
+            /* makes the design responsive */
+            /* flex-wrap: wrap; */
+            /* it will wrap the elements in reverse */
+            /* flex-wrap: wrap-reverse; */
+            /* if we want to give direction and wrapping in single line then we should use */
+            /* flex-flow: row wrap; */
+            /* justify-content will justify the elements horizontally */
+            /* it has space-around, space-between, center, baseline etc */
+            justify-content: space-evenly;
+            /* align-items will justify the elements vertically */
+            /* align-items: center; */
+        }
+        
+        .item {
+            background-color: rgb(145, 255, 71);
+            border: 2px solid black;
+            margin: 10px;
+            padding: 3px;
+            width: 200px;
+            height: 200px;
+            font-size: 50px;
+        }
+        /* which element has more order value will be placed at from last */
+        /* below item2 has more order value and it will be placed after item1 */
+        /* by default it is 0 */
+        
+        #item1 {
+            /* order: 2; */
+            /* using this property the item will be larger and will adjust according to container */
+            flex-grow: 1;
+        }
+        
+        #item2 {
+            /* order: 3; */
+            /* In this case when flex-grow value is higher than other values then higher value item will grow more than lower value */
+            /* As here item2 will grow more than item1 */
+            /* flex-grow: 4; */
+            /* flex: <flex-grow>  <flex-shrink>  <flex-basis>; */
+            /* flex: 2 2 230px; */
+            /* using << align-self: flex-start; >> element will pulled at the start of the container  */
+            /* align-self: flex-start; */
+            /* using <<align-self:flex-end;>> element will pushed at the end of the box */
+            /* align-self: flex-end; */
+            /* using align-self: center; the element will pushed to the center in the container */
+            align-self: center;
+        }
+        
+        #item3 {
+            /* this will make the element shrink at shortest size */
+            flex-shrink: 1;
+            /* flex-basis: will change the basic value of the element */
+            /* when flex-direction: is row then its width will affect when it is in column its height will affect */
+            /* flex-basis: 400px; */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>This is FlexBox Tutorial</h1>
+    <div class="container">
+        <div class="item" id="item1">1</div>
+        <div class="item" id="item2">2</div>
+        <div class="item" id="item3">3</div>
+    </div>
+</body>
+
+</html>
