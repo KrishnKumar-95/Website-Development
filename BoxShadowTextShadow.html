@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Shadow and Text Shadow</title>
+</head>
+<style>
+    .container {
+        display: flex;
+    }
+    
+    .card {
+        border-radius: 23px;
+        padding: 23px 23px;
+        margin: 23px 12px;
+        /* border: 2px solid red; */
+        background: khaki;
+        /* box-shadow is used to give shadow to any element to look realistic */
+        /* this values are also in negetive which pushes the box-shadow upward corner */
+        /* box-shadow: <<x axis>>  <<y axis>> <<blur radius>> <<spread radius>> color; */
+        /* color rgba :- a is alpha which decides the darkness of the color */
+        /* inset enables the inner shadow of the container */
+        box-shadow: 5px 5px 10px rgba(139, 131, 131, 1), inset 5px 75px tomato;
+        /* box-shadow: inset 5px 75px tomato; */
+    }
+    
+    .card h2 {
+        text-shadow: 2px 2px green;
+    }
+    
+    .header {
+        display: flex;
+        justify-content: center;
+        background-color: tomato;
+        border-radius: 23px;
+    }
+    
+    .navigation {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .navigation li a:hover {
+        font-size: 18px;
+        color: cadetblue;
+    }
+    
+    .navigation li a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    .navigation ul {
+        width: 500px;
+        border: 1px solid tomato;
+        display: flex;
+        list-style: none;
+        border-radius: 23px;
+        background-color: khaki;
+        justify-content: center;
+        font-weight: bold;
+    }
+    
+    .item {
+        margin: 23px 23px;
+    }
+</style>
+
+<body>
+    <header class="header">
+        <h1>Web Development Tutorial</h1>
+    </header>
+    <div class="navigation">
+        <nav>
+            <ul>
+                <li class="item"><a href="http://indiandexter.com">Home</a></li>
+                <li class="item"><a href="http://indiandexter.com">Courses</a></li>
+                <li class="item"><a href="http://indiandexter.com">About Us</a></li>
+                <li class="item"><a href="http://indiandexter.com">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="card" id="car1">
+            <h2>This is CSS course.</h2>
+            <p>We will learn CSS to add designs to the website and this will be the best course for us We will learn the beginner to Advance CSS to design any of the Website.Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, aliquam repudiandae
+                fugit quia molestiae expedita, libero sit vel sunt asperiores necessitatibus quasi illo maxime ex corporis eaque magni at, impedit modi sed! Earum, porro.</p>
+        </div>
+        <div class="card" id="car2">
+            <h2>This is an HTML course.</h2>
+            <p>We will learn HTML to design the structure of the Website this will be the best course for us We will learn the beginner to Advance CSS to design any of the Website. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet eligendi illum
+                quidem nostrum ad, minima rerum nemo iure cumque quisquam necessitatibus sapiente molestiae? Iusto nulla sunt veniam voluptate rerum dolore culpa accusamus iste commodi!
+            </p>
+        </div>
+        <div class="card" id="car3">
+            <h2>This is JavaScript course.</h2>
+            <p>We will learn JavaScript to build logical structure of the Website this will be the best course for us We will learn the beginner to Advance JavaScript to design any of the Website.Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                officiis quod suscipit magnam sed incidunt dolores eveniet? Ipsam quod mollitia neque, vero necessitatibus odio pariatur doloribus quis numquam distinctio, dignissimos soluta tempore possimus velit.</p>
+        </div>
+    </div>
+</body>
+
+</html>
