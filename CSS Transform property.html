@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transform Property</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .container {
+        height: 80vh;
+        background: cornflowerblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: yellowgreen;
+        border: 4px solid red;
+        border-radius: 10px;
+        height: 400px;
+        width: 400px;
+        transition: all 1s ease;
+    }
+    
+    .box:hover {
+        font-size: 50px;
+        /* This will rotate the shape or element */
+        /* transform: rotate(720deg);*/
+        /* This will slant the shape */
+        /*transform: skew(60deg);*/
+        /* This will grow the shape */
+        /* transform: scale(2); */
+        /* This will move the shape forward upto specific px */
+        /* transform: translateX(144px); */
+        /* This will move the shape vertically */
+        /* transform: translateY(144px); */
+        /* This will move the shape diagonally */
+        /* transform: translate(144px, 144px); */
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="box">
+            IndianDexter
+        </div>
+
+    </div>
+</body>
+
+</html>
