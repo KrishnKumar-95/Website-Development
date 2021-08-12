@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables and Custom Properties</title>
+</head>
+<style>
+     :root {
+        --primary-color: blue;
+        --danger-color: red;
+        --max-width: 733px;
+    }
+    
+    .box {
+        /* This is a variable for color when we change the color at source it will apply to all places where it will be used */
+        /* the scope of a variable is into the CSS Class Box */
+        /* --box-color: blue; */
+        width: 200px;
+        height: 200px;
+        background-color: var(--primary-color);
+        border: 2px solid var(--danger-color);
+        box-shadow: 3px 3px var(--primary-color);
+        margin: 2px 9px;
+    }
+    
+    .container {
+        max-width: var(--max-width);
+        /* margin aligns the item on the screen by giving same margin value both side */
+        margin: auto;
+        display: flex;
+        align-items: center;
+        background-color: var(--danger-color);
+        /* justify-content aligns elements within the box */
+        justify-content: center;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>
