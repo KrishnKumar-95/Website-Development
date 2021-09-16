@@ -7,6 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best online Food Delivery Service | foodmeals.com</title>
     <link rel="stylesheet" href="/Food_Website/CSS/style.css">
+    <link rel="stylesheet" media="screen and (max-width: 1170px)" href="CSS/phone.css">
+
+    <!-- mobile smartphone : 480px
+    low resolution tab : 767px
+    tab portrait mode : 1024px
+    desktop : 1024px
+    huge size : 1281px -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Bree+Serif&display=swap" rel="stylesheet">
@@ -30,7 +37,6 @@
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
         <button class="btn">Order Now</button>
     </section>
-
     <section class="services-container">
         <h1 class="primary-heading flex-center-horizontal">Our Services</h1>
         <div id="services">
@@ -41,13 +47,13 @@
                     unde minima nam!</p>
             </div>
             <div class="box">
-                <img src="/Food_Website/img/pexels-brett-jordan-825661.jpg" alt="Bulk Ordering">
+                <img src="img/pexels-ella-olsson-3026808.jpg">
                 <h2 class="secondary-heading flex-center-horizontal">Bulk Ordering</h2>
                 <p class="para-font">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident nobis magnam deserunt ex adipisci reprehenderit distinctio, odit error ab fugit dolor rem dignissimos consequatur recusandae nemo animi repellendus, quia laudantium! Neque
                     unde minima nam!</p>
             </div>
             <div class="box">
-                <img src="/Food_Website/img/pexels-brett-jordan-825661.jpg" alt="Food Ordering">
+                <img src="/Food_Website/img/pexels-engin-akyurt-2282528.jpg">
                 <h2 class="secondary-heading flex-center-horizontal">Food Ordering</h2>
                 <p class="para-font">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident nobis magnam deserunt ex adipisci reprehenderit distinctio, odit error ab fugit dolor rem dignissimos consequatur recusandae nemo animi repellendus, quia laudantium! Neque
                     unde minima nam!</p>
@@ -58,43 +64,62 @@
         <h1 class="primary-heading center flex-center-horizontal">Our Clients</h1>
         <div id="clients">
             <div class="client-items">
-
                 <div class="img-to-text">
                     <img src="/Food_Website/img/skype-3384016_1280.png" alt="Our Client" class="image">
                     <span class="centered">
-                        <span class="text">Get Now</span>
+                        <span class="text">Skype</span>
                     </span>
                 </div>
 
-                <h2 class="secondary-heading flex-center-horizontal">Skype</h2>
-                <p class="para-font">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem odit temporibus minus accusamus sed!</p>
             </div>
             <div class="client-items">
 
                 <div class="img-to-text">
-                    <img src="/Food_Website/img/skype-3384016_1280.png" alt="Our Client" class="image">
+                    <img src="/Food_Website/img/png-apple-logo-9711.png" class="image" alt="Our Client">
                     <span class="centered">
-                        <span class="text">Get Now</span>
+                        <span class="text">Apple</span>
                     </span>
                 </div>
 
-                <h2 class="secondary-heading flex-center-horizontal">Skype</h2>
-                <p class="para-font">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem odit temporibus minus accusamus sed!</p>
             </div>
             <div class="client-items">
-
                 <div class="img-to-text">
-                    <img src="/Food_Website/img/skype-3384016_1280.png" alt="Our Client" class="image">
+                    <img src="/Food_Website/img/hplogo.png" alt="Our Client" class="image">
                     <span class="centered">
-                        <span class="text">Get Now</span>
+                        <span class="text">hawlett<br>packard</span>
                     </span>
                 </div>
-
-                <h2 class="secondary-heading flex-center-horizontal">Skype</h2>
-                <p class="para-font">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem odit temporibus minus accusamus sed!</p>
             </div>
         </div>
     </section>
+
+    <section id="contact">
+        <h1 class="primary-heading flex-center-horizontal">Contact Us</h1>
+        <div id="contact-box">
+            <form action="">
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email: </label>
+                    <input type="email" name="name" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone: </label>
+                    <input type="phone" name="name" id="phone" placeholder="Enter your phone">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message: </label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="flex-center-horizontal footer">
+        Copyright &copy; indiandexter.com All rights reserved|
+    </footer>
 </body>
 
 </html>
