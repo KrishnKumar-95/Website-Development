@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Grids</title>
+</head>
+<style>
+    .container {
+        display: grid;
+        /* grid-template-columns: auto auto auto; */
+        /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+        /* This calculate on the basis on which we are dividing the screen */
+        /* Here screen is divided in 7 parts and 1 part is alloted to 1st column 4parts to 2nd column and 3 parts to 3rd Column */
+        grid-template-columns: 1fr 4fr 3fr;
+        /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+        /* This is used to set the items according to columns which repeat the column of given numbers and we can also set the width of the item repeat(<number of columns we need>, <width of the item>) */
+        grid-template-columns: repeat(1, 400px);
+    }
+    
+    .item {
+        border: 2px solid black;
+        margin: 5px 5px;
+        /* height: 100px; */
+        /* width: 100px; */
+        background-color: red;
+        padding: 15px 5px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <!-- div.item{This is item-$}10  After that just I pressed Enter-->
+        <div class="item">This is item-1</div>
+        <div class="item">This is item-2</div>
+        <div class="item">This is item-3</div>
+        <div class="item">This is item-4</div>
+        <div class="item">This is item-5</div>
+        <div class="item">This is item-6</div>
+        <div class="item">This is item-7</div>
+        <div class="item">This is item-8</div>
+        <div class="item">This is item-9</div>
+        <div class="item">This is item-10</div>
+    </div>
+</body>
+
+</html>

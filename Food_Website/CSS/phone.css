@@ -37,11 +37,11 @@
     flex-direction: column;
 }
 
-.services-container {
+#services-container {
     margin-top: 0px;
 }
 
-.services-container h1 {
+#services-container h1 {
     font-size: 40px;
 }
 

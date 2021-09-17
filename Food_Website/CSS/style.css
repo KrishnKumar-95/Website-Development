@@ -5,6 +5,10 @@
     padding: 0px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 
 /* CSS Variable */
 
@@ -225,7 +229,7 @@
     }
 }
 
-.services-container {
+#services-container {
     margin-top: 50px;
 }
 
