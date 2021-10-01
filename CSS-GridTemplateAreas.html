@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Template Areas</title>
+</head>
+<style>
+    .container {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas: 'navbar navbar navbar navbar' 'section section section aside' 'footer footer footer footer';
+    }
+    
+    .item {
+        background-color: tomato;
+        border: 2px solid teal;
+        padding: 12px 23px;
+    }
+    
+    #navbar {
+        grid-area: navbar;
+    }
+    
+    #section {
+        grid-area: section;
+    }
+    
+    #aside {
+        grid-area: aside;
+    }
+    
+    #footer {
+        grid-area: footer;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div id="navbar" class="item">
+            Home Services About Contact Us
+        </div>
+        <div id="section" class="item">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia ex necessitatibus ut eaque architecto accusantium minus, explicabo odio nesciunt vitae, eius doloribus porro voluptatem dolor atque. Rem enim aliquam inventore autem molestias placeat
+            quis nam odio recusandae ipsa. Autem adipisci laudantium sed, eligendi illo est consequatur eveniet natus ad mollitia officia suscipit veritatis, voluptas nesciunt? Quos, quia? Omnis distinctio, excepturi eveniet, hic ea veniam aliquid facilis
+            architecto maxime blanditiis natus dicta deserunt ducimus? Voluptates perferendis iste omnis eaque! Facilis, at. Quibusdam quisquam mollitia, aspernatur eius velit distinctio temporibus culpa. Modi minima vitae ullam saepe atque dicta ratione
+            nemo nam, nihil molestias? Nam perferendis sapiente repellat laborum nisi numquam maiores quibusdam, odit mollitia pariatur cupiditate eos dicta neque porro enim dolor voluptates culpa explicabo magni quo! Neque fuga minus consectetur adipisci
+            assumenda consequuntur numquam, magni ex beatae nesciunt quam facere a nostrum dolorem culpa iusto doloremque nam dignissimos exercitationem harum eligendi asperiores mollitia deleniti dolorum. Quod consequuntur molestiae eveniet excepturi
+            ex, similique, cum, totam corporis voluptate placeat ut quisquam libero eum vel praesentium ratione? Laboriosam, cupiditate tenetur eius perspiciatis vitae pariatur molestiae fuga placeat maxime aperiam porro neque non debitis sint possimus
+            magni deleniti dicta cum molestias dolore animi! Ipsa, nam!
+        </div>
+        <div id="aside" class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus nesciunt, nemo labore quasi officia voluptate dolorum magnam tenetur, assumenda nisi, in provident et ea! Corrupti unde labore maiores asperiores? Cumque soluta aliquid eos?
+            Perferendis animi facere error. Optio facilis, temporibus ducimus nobis nesciunt laboriosam sapiente fugiat doloremque natus necessitatibus quaerat similique ea expedita, veritatis atque quam quisquam! Adipisci ullam, placeat, mollitia exercitationem
+            ab inventore minus iusto, odio perferendis repellat excepturi recusandae soluta a vel impedit dolorum accusamus tenetur accusantium doloribus! Ipsam modi harum tempora, molestias illum incidunt, culpa veniam vitae obcaecati quod laboriosam
+            voluptatibus voluptatem tempore. A, ad nihil similique eius, itaque corrupti mollitia doloribus ullam, autem consectetur odit velit id blanditiis minima fuga. Optio ut dolore, quas quibusdam expedita similique quaerat enim tempora commodi
+            fuga error libero unde cupiditate repudiandae atque voluptate voluptates architecto suscipit quidem esse. Quas, animi quos voluptate expedita eos delectus impedit quo nisi eligendi fugit.</div>
+        <footer id="footer" class="item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem error culpa explicabo perspiciatis. Quod illum earum aliquam libero fugit excepturi ducimus nulla? Nisi debitis laboriosam harum aspernatur enim voluptatum dolorum?
+        </footer>
+        <!-- <div class="item">This is item-1</div>
+        <div class="item">This is item-2</div>
+        <div class="item">This is item-3</div>
+        <div class="item">This is item-4</div>
+        <div class="item">This is item-5</div>
+        <div class="item">This is item-6</div>
+        <div class="item">This is item-7</div>
+        <div class="item">This is item-8</div>
+        <div class="item">This is item-9</div>
+        <div class="item">This is item-10</div>
+        <div class="item">This is item-11</div>
+        <div class="item">This is item-12</div>
+        <div class="item">This is item-13</div>
+        <div class="item">This is item-14</div> -->
+    </div>
+</body>
+
+</html>
