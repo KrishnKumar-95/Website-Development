@@ -1,0 +1,18 @@
+{
+    "name": "fileupload",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon index.js"
+    },
+    "author": "krishn",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1",
+        "formidable": "^1.2.2",
+        "googleapis": "^39.2.0",
+        "nodemon": "^2.0.13",
+        "require": "^2.4.20"
+    }
+}

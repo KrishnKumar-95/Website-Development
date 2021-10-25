@@ -10,15 +10,16 @@
 <style>
     .container {
         display: grid;
-        grid-gap: 1rem;
+        gap: 1em;
         grid-template-areas: 'navbar navbar navbar navbar' 'section section section aside' 'footer footer footer footer';
     }
     
     .item {
-        background-color: tomato;
+        background-color: greenyellow;
         border: 2px solid teal;
         padding: 12px 23px;
     }
+    /* These ids are marked as grid area */
     
     #navbar {
         grid-area: navbar;
@@ -40,7 +41,7 @@
 <body>
     <div class="container">
         <div id="navbar" class="item">
-            Home Services About Contact Us
+            Home &nbsp; Services &nbsp; About &nbsp; Contact Us
         </div>
         <div id="section" class="item">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia ex necessitatibus ut eaque architecto accusantium minus, explicabo odio nesciunt vitae, eius doloribus porro voluptatem dolor atque. Rem enim aliquam inventore autem molestias placeat
@@ -59,7 +60,7 @@
         <footer id="footer" class="item">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem error culpa explicabo perspiciatis. Quod illum earum aliquam libero fugit excepturi ducimus nulla? Nisi debitis laboriosam harum aspernatur enim voluptatum dolorum?
         </footer>
-        <!-- <div class="item">This is item-1</div>
+        <div class="item">This is item-1</div>
         <div class="item">This is item-2</div>
         <div class="item">This is item-3</div>
         <div class="item">This is item-4</div>
@@ -72,7 +73,7 @@
         <div class="item">This is item-11</div>
         <div class="item">This is item-12</div>
         <div class="item">This is item-13</div>
-        <div class="item">This is item-14</div> -->
+        <div class="item">This is item-14</div>
     </div>
 </body>
 

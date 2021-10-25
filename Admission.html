@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <base target="_top">
+    <script>
+        function AddRow() {
+            var CandidateName = document.getElementById("CandidateName").value;
+            var FatherName = document.getElementById("FatherName").value;
+            var MotherName = document.getElementById("MotherName").value;
+            var DateofBirth = document.getElementById("DateofBirth").value;
+            var Gender = document.getElementById("Gender").value;
+            var CasteCategory = document.getElementById("CasteCategory").value;
+            var PhoneORWhatsappNo = document.getElementById("PhoneORWhatsappNo").value;
+            var EmailID = document.getElementById("EmailID").value;
+            var PermanentAddress = document.getElementById("PermanentAddress").value;
+            var MMBoardInstituteName = document.getElementById("MMBoardInstituteName").value;
+            var MMRollNo = document.getElementById("MMRollNo").value;
+            var MMPassYear = document.getElementById("MMPassYear").value;
+            var MMObtainMarks = document.getElementById("MMObtainMarks").value;
+            var MMTotalMarks = document.getElementById("MMTotalMarks").value;
+            var SSBoardInstitute = document.getElementById("SSBoardInstitute").value;
+            var SSRollNo = document.getElementById("SSRollNo").value;
+            var SSPassYear = document.getElementById("SSPassYear").value;
+            var SSObtainMarks = document.getElementById("SSObtainMarks").value;
+            var SSTotalMarks = document.getElementById("SSTotalMarks").value;
+            var UGUniversity = document.getElementById("UGUniversity").value;
+            var UGRollNum = document.getElementById("UGRollNum").value;
+            var UGPassYear = document.getElementById("UGPassYear").value;
+            var UGObtainMarks = document.getElementById("UGObtainMarks").value;
+            var UGTotalMarks = document.getElementById("UGTotalMarks").value;
+            var UGcgpa = document.getElementById("UGcgpa").value;
+            var PGUniversity = document.getElementById("PGUniversity").value;
+            var PGRollNum = document.getElementById("PGRollNum").value;
+            var PGPassYear = document.getElementById("PGPassYear").value;
+            var PGObtainMarks = document.getElementById("PGObtainMarks").value;
+            var PGTotalMarks = document.getElementById("PGTotalMarks").value;
+            var PGcgpa = document.getElementById("PGcgpa").value;
+            var StudentPic = document.getElementById("StudentPic").value;
+            var StudentThumb = document.getElementById("StudentThumb").value;
+            var StudentPDF = document.getElementById("StudentPDF").value;
+
+            google.script.run.AddRecord(CandidateName, FatherName, MotherName, DateofBirth, Gender, CasteCategory, PhoneORWhatsappNo, EmailID, PermanentAddress, MMBoardInstituteName, MMRollNo, MMPassYear, MMObtainMarks, MMTotalMarks, SSBoardInstitute, SSRollNo, SSPassYear, SSObtainMarks, SSTotalMarks, UGUniversity, UGRollNum, UGPassYear, UGObtainMarks, UGTotalMarks, UGcgpa, PGUniversity, PGRollNum, PGPassYear, PGObtainMarks, PGTotalMarks, PGcgpa, StudentPic, StudentThumb, StudentPDF);
+
+            document.getElementById("CandidateName").value = '';
+            document.getElementById("FatherName").value = '';
+            document.getElementById("MotherName").value = '';
+            document.getElementById("DateofBirth").value;
+            document.getElementById("Gender").value = '';
+            document.getElementById("CasteCategory").value = '';
+            document.getElementById("PhoneORWhatsappNo").value = '';
+            document.getElementById("EmailID").value = '';
+            document.getElementById("PermanentAddress").value = '';
+            document.getElementById("MMBoardInstituteName").value = '';
+            document.getElementById("MMRollNo").value = '';
+            document.getElementById("MMPassYear").value = '';
+            document.getElementById("MMObtainMarks").value = '';
+            document.getElementById("MMTotalMarks").value = '';
+            document.getElementById("SSBoardInstitute").value = '';
+            document.getElementById("SSRollNo").value = '';
+            document.getElementById("SSPassYear").value = '';
+            document.getElementById("SSObtainMarks").value = '';
+            document.getElementById("SSTotalMarks").value = '';
+            document.getElementById("UGUniversity").value = '';
+            document.getElementById("UGRollNum").value = '';
+            document.getElementById("UGPassYear").value = '';
+            document.getElementById("UGObtainMarks").value = '';
+            document.getElementById("UGTotalMarks").value = '';
+            document.getElementById("UGcgpa").value = '';
+            document.getElementById("PGUniversity").value = '';
+            document.getElementById("PGRollNum").value = '';
+            document.getElementById("PGPassYear").value = '';
+            document.getElementById("PGObtainMarks").value = '';
+            document.getElementById("PGTotalMarks").value = '';
+            document.getElementById("PGcgpa").value = '';
+            document.getElementById("StudentPic").value = '';
+            document.getElementById("StudentThumb").value;
+            document.getElementById("StudentPDF").value;
+        }
+
+        function FinalMessage() {
+            document.getElementById("FinalMessage").innerHTML = "Your form has been Submitted. / आपका फॉर्म सबमिट हो चुका है।"
+        }
+    </script>
+    <style>
+        .container1 {
+            display: grid;
+            grid-template-columns: 600px auto;
+            grid-gap: 1rem;
+        }
+        
+        .container2 {
+            display: grid;
+            grid-template-columns: 600px auto;
+            grid-gap: 1rem;
+        }
+        
+        .container3 {
+            display: grid;
+            grid-template-columns: 600px auto;
+            grid-gap: 1rem;
+        }
+        
+        .container4 {
+            display: grid;
+            grid-template-columns: 600px auto;
+            grid-gap: 1rem;
+        }
+        
+        .container5 {
+            display: grid;
+            grid-template-columns: 600px auto;
+            grid-gap: 1rem;
+        }
+        
+        .container6 {
+            display: grid;
+            grid-template-columns: 600px auto;
+            grid-gap: 1rem;
+            height: 100px;
+            align-items: center;
+        }
+        
+        .container7 {
+            display: grid;
+            grid-template-columns: 600px auto;
+            align-items: center;
+            grid-gap: 1rem;
+            height: 100px;
+            align-items: center;
+        }
+        
+        .container8 {
+            display: grid;
+            grid-template-columns: 600px auto;
+            height: 100px;
+            align-items: center;
+            grid-gap: 1rem;
+            align-items: center;
+        }
+        
+        .container9 {
+            display: grid;
+            align-items: center;
+            height: 100px;
+            align-items: center;
+            width: 800px;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HEADING -->
+    <h2><u>Fill the Form for Regisration/Admission.</u></h2>
+
+
+    <!-- PARAGRAPH -->
+    <p>1. Fields has asterisk(<span style="color: red;">*</span>) are required please fill carefully.<br>2. Data once submitted no need to fill the form again for same candidate.<br>3. In case any query or <strong style="color: red;"> Technical Issue</strong>        directly chat us on Whatsapp by heading to the contact us page.
+    </p>
+
+
+    <form>
+        <div class="container1">
+
+            <div class="item" style="font-size: large;">Candidate Name(In Block Letters)<span style="color: red;">*</span> </div>
+            <div class="item"><input required style="font-size: large; width: 400px;" type="text" id="CandidateName" placeholder="Enter your name..." /></div>
+
+
+            <div class="item" style="font-size: large;">Father Name(In Block Letters)<span style="color: red;">*</span></div>
+            <div class="item"><input required style="font-size: large; width: 400px;" type="text" id="FatherName" placeholder="Enter your father name" /></div>
+
+
+            <div class="item" style="font-size: large;">Mother Name<span style="color: red;">*</span></div>
+            <div class="item"><input required style="font-size: large; width: 400px;" type="text" id="MotherName" placeholder="Enter your Mother Name..." /></div>
+
+            <div class="item" style="font-size: large;">Date of Birth<span style="color: red;">*</span></div>
+            <div class="item"><input required style="font-size: large; width: 400px;" type="date" id="DateofBirth" placeholder="Enter Date of Birth (DD/MM/YYYY)..." /></div>
+
+            <div class="item">
+                <label for="Gender">Gender:</label>
+                <select name="Gender" id="Gender">
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+    <option value="Other">Other</option>
+  </select>
+            </div>
+            <div class="item">
+                <label for="CasteCategory">CasteCategory:</label>
+                <select name="CasteCategory" id="CasteCategory">
+    <option value="General">General</option>
+    <option value="BCA">BCA</option>
+    <option value="BCB">BCB</option>
+    <option value="SC/ST">SC/ST</option>
+  </select>
+            </div>
+            <p>><u><strong> Enter valid Phone OR WhatsappNo and Email-ID so you can get the notification regarding your Registration/Admission</u><br><br>><u> अपना व्हाट्सएप नंबर और ईमेल आईडी दर्ज करें ताकि आपको एडमिशन और रजिस्ट्रेशन से संबंधित नोटिफिकेशन प्राप्त हो सकें।</strong></u></p>
+            <div class="item"></div>
+            <div class="item" style="font-size: large;">Whatsapp No<span style="color: red;">*</span></div>
+            <div class="item"><input required style="font-size: large; width: 400px;" type="tel" id="PhoneORWhatsappNo" placeholder="Enter valid Whatsapp No" /></div>
+
+
+            <div class="item" style="font-size: large;">Email-ID<span style="color: red;">*</span></div>
+            <div class="item"><input required style="font-size: large; width: 400px;" type="email" id="EmailID" placeholder="Enter valid Email ID..." /></div>
+
+
+            <div class="item" style="font-size: large;">Permanent Address<span style="color: red;">*</span></div>
+            <div class="item"><input required style="font-size: large; width: 400px;" type="text" id="PermanentAddress" placeholder="Enter your Permanent Address..." /></div>
+        </div>
+        <hr>
+        <h4>><u> Enter your 10<sup>th</sup> Class Details</u></h4>
+        <h4>><u> अपनी हाई स्कूल / दसवीं की जानकारी साझा करें।</u></h4>
+        <div class="container2">
+            <div class="item" style="font-size: large;">Board Name<span style="color: red;">*</span></div>
+            <div class="item"><input required style="font-size: large; width: 400px;" type="text" id="MMBoardInstituteName" placeholder="Enter your 10th Board Name" /></div>
+
+            <div class="item" style="font-size: large;">Roll No<span style="color: red;">*</span></div>
+            <div class="item"><input required style="font-size: large; width: 400px;" type="text" id="MMRollNo" placeholder="Enter 10th passing Year" /></div>
+
+
+            <div class="item" style="font-size: large;">Passing Year<span style="color: red;">*</span></div>
+            <div class="item"><input required style="font-size: large; width: 400px;" type="text" id="MMPassYear" placeholder="Enter 10th passing year..." /></div>
+
+
+            <div class="item" style="font-size: large;">Obtained Marks<span style="color: red;">*</span></div>
+            <div class="item"><input required style="font-size: large; width: 400px;" type="number" id="MMObtainMarks" placeholder="Enter 10th Obtained Marks" /></div>
+
+            <div class="item" style="font-size: large;">Total Marks<span style="color: red;">*</span></div>
+            <div class="item"><input required style="font-size: large; width: 400px;" type="number" id="MMTotalMarks" placeholder="Enter 10th Total Marks" /></div>
+        </div>
+        <hr>
+        <h4><u>Enter your 12<sup>th</sup> Class Details</u></h4>
+        <h4>><u>  अपनी सीनियर सेकेंडरी / इंटर की जानकारी साझा करें।</u></h4>
+        <div class="container3">
+            <div class="item" style="font-size: large;">Board/Institute Name<span style="color: red;">*</span></div>
+            <div class="item"><input required style="font-size: large; width: 400px;" type="text" id="SSBoardInstitute" placeholder="Enter 12th Board Name" /></div>
+
+            <div class="item" style="font-size: large;">Roll No<span style="color: red;">*</span></div>
+            <div class="item"><input required style="font-size: large; width: 400px;" type="text" id="SSRollNo" placeholder="Enter 12th Roll No" /></div>
+
+            <div class="item" style="font-size: large;">Passing Year<span style="color: red;">*</span></div>
+            <div class="item"><input required style="font-size: large; width: 400px;" type="text" id="SSPassYear" placeholder="Enter 12th Passing Year" /></div>
+
+
+            <div class="item" style="font-size: large;">Obtained Marks<span style="color: red;">*</span></div>
+            <div class="item"><input required style="font-size: large; width: 400px;" type="number" id="SSObtainMarks" placeholder="Enter 12th Obtained Marks" /></div>
+
+
+            <div class="item" style="font-size: large;">Total Marks<span style="color: red;">*</span></div>
+            <div class="item"><input required style="font-size: large; width: 400px;" type="number" id="SSTotalMarks" placeholder="Enter 12th Total Marks" /></div>
+        </div>
+        <hr>
+        <h4>></u> Enter UnderGraduate/Graduation Details</u>
+        </h4>
+        <h4>><u> अपनी स्नातक की जानकारी साझा करें।</u></h4>
+        <div class="container4">
+            <div class="item" style="font-size: large;">University/Institute Name<span style="color: red;">*</span></div>
+            <div class="item"><input required style="font-size: large; width: 400px;" type="text" id="UGUniversity" placeholder="Enter Under Graduate University Name" /></div>
+
+
+            <div class="item" style="font-size: large;">University Roll No<span style="color: red;">*</span></div>
+            <div class="item"><input required style="font-size: large; width: 400px;" type="text" id="UGRollNum" placeholder="Enter University Roll No" /></div>
+
+            <div class="item" style="font-size: large;">Passing Year<span style="color: red;">*</span></div>
+            <div class="item"><input required style="font-size: large; width: 400px;" type="text" id="UGPassYear" placeholder="Enter UG Passing Year" /></div>
+
+
+            <div class="item" style="font-size: large;">Obtained Marks</div>
+            <div class="item"><input style="font-size: large; width: 400px;" type="number" id="UGObtainMarks" placeholder="Enter UG Obtained Marks" /></div>
+
+            <div class="item" style="font-size: large;">Total Marks</div>
+            <div class="item"><input style="font-size: large; width: 400px;" type="number" id="UGTotalMarks" placeholder="Enter UG Total Marks" /></div>
+            <div class="item" style="font-size: large;">CGPA(If Any, Otherwise ignore)</div>
+            <div class="item"><input style="font-size: large; width: 400px;" type="text" id="UGcgpa" placeholder="Enter UG CGPA if any" /></div>
+        </div>
+        <hr>
+        <h4>><u> Enter Post-Graduate(PG) Details</u></h4>
+        <h4>><u> अपनी स्नातकोत्तर की जानकारी साझा करें।</u></h4>
+        <div class="container5">
+            <div class="item" style="font-size: large;">University Name<span style="color: red;">*</span></div>
+            <div class="item"><input required style="font-size: large; width: 400px;" type="text" id="PGUniversity" placeholder="Enter PG University Name" /></div>
+
+
+            <div class="item" style="font-size: large;">Roll No<span style="color: red;">*</span></div>
+            <div class="item"><input required style="font-size: large; width: 400px;" type="text" id="PGRollNum" placeholder="Enter PG Roll No" /></div>
+
+            <div class="item" style="font-size: large;">Passing Year<span style="color: red;">*</span></div>
+            <div class="item"><input required style="font-size: large; width: 400px;" type="text" id="PGPassYear" placeholder="Enter PG Passing Year" /></div>
+
+
+            <div class="item" style="font-size: large;">Obtained Marks</div>
+            <div class="item"><input style="font-size: large; width: 400px;" type="number" id="PGObtainMarks" placeholder="Enter PG Obtained Marks" /></div>
+
+
+            <div class="item" style="font-size: large;">Total Marks</div>
+            <div class="item"><input style="font-size: large; width: 400px;" type="number" id="PGTotalMarks" placeholder="Enter PG Total Marks" /></div>
+
+            <div class="item" style="font-size: large;">CGPA(If Any, Otherwise ignore)</div>
+            <div class="item"><input style="font-size: large; width: 400px;" type="text" id="PGcgpa" placeholder="Enter PG CGPA" /></div>
+        </div>
+        <hr>
+        <h4>><u>Upload recent Passport Size Photograph, Signature & Single PDF file of Documents and these should be named as your Phone number.</u></h4>
+        <h4>><u>अपनी पासपोर्ट साइज फोटो, हस्ताक्षर और अपने डॉक्युमेंट्स की एक पीडीएफ फाइल बना कर  तथा तीनो डॉक्युमेंट्स (पासपोर्ट साइज फोटो, हस्ताक्षर तथा डॉक्युमेंट्स की एक पीडीएफ फाइल) का नाम अपने मोबाइल नंबर के नाम पर सेव करके अपलोड करें।<br> Example : > [ 9518297071.jpg , 9518297071.jpeg , 9518297071.pdf ]</u></h4>
+        <form action="">
+            <div class="container6">
+                <div class="item" style="font-size: large;">Upload Passport Photo : </div>
+                <div class="item"><input style="font-size: large; width: 400px;" type="file" id="StudentPic" /></div>
+            </div>
+            <div class="container7">
+                <div class="item" style="font-size: large;">Upload Thumb Impression : </div>
+                <div class="item"><input style="font-size: large; width: 400px;" type="file" id="StudentThumb" /></div>
+            </div>
+            <div class="container8">
+                <div class="item" style="font-size: large;">Upload Documents in (Single file PDF fromat) : </div>
+                <div class="item"><input style="font-size: large; width: 400px;" type="file" id="StudentPDF" /></div>
+
+            </div>
+            </div>
+        </form>
+        <hr>
+        <div class="container9">
+            <h3 id="FinalMessage"></h3>
+            <input style="font-size: large; width: 200px; height: 40px; align-items: center;" type="submit" value="Submit" onclick="AddRow(); FinalMessage()" />
+            <br>
+        </div>
+        <hr>
+    </form>
+</body>
+
+</html>
+
+<!-- <input type="submit" value="Show" onclick="GFG_Fun_2(); FinalMessage()" />
+
+<p id="GFG_DOWN_2"></p>
+<p id="FinalMessage"></p>
+
+
+
+<script>
+    var krishn1 = document.getElementById('FinalMessage');
+
+    var krishn2 = document.getElementById('GFG_DOWN_2');
+
+
+    function FinalMessage() {
+
+        krishn1.innerHTML = 'Your form has been Submitted. / आपका फॉर्म सबमिट हो चुका है।';
+
+    }
+
+
+    function GFG_Fun_2() {
+
+        krishn2.innerHTML = 'From function 2';
+
+    }
+</script>
+
+
+</body>
+
+
+</html> -->
