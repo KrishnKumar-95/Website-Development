@@ -66,8 +66,8 @@
 			<tbody>
 		<?php
 		
-		$con = mysqli_connect('localhost','indiand1_krishn','951829_Krishn');
-		mysqli_select_db($con,'indiand1_beddata202123');
+		$con = mysqli_connect('localhost','MYSQL-USER-NAME','<MYSQL-USER-PASSWORD>');
+		mysqli_select_db($con,'MYSQL-DATABASE-NAME');
 		
 		if(isset($_POST['submit'])) {
 		    
