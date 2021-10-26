@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Grid-Media-Queries</title>
+</head>
+
+<style>
+    .container {
+        display: grid;
+        gap: 1rem;
+        grid-template-areas: 'navbar navbar navbar navbar' 'section section section aside' 'footer footer footer footer';
+    }
+    /* Media Queries */
+    
+    @media only screen and (max-width: 300px) {
+        body {
+            background-color: tomato;
+        }
+        span {
+            display: block;
+            text-align: center;
+        }
+        .container {
+            grid-template-areas: 'navbar navbar navbar navbar' 'section section section section' 'footer footer footer footer';
+        }
+        aside {
+            display: none;
+        }
+    }
+    
+    @media only screen and (min-width: 301px) and (max-width: 500px) {
+        body {
+            background-color: red;
+        }
+        .container {
+            grid-template-areas: 'navbar navbar navbar navbar' 'section section section section' 'footer footer footer footer';
+        }
+        aside {
+            display: none;
+        }
+        span {
+            display: block;
+            text-align: center;
+        }
+    }
+    
+    @media only screen and (min-width: 501px) and (max-width: 800px) {
+        body {
+            background-color: yellow;
+        }
+        .container {
+            grid-template-areas: 'navbar navbar navbar navbar' 'section section section section' 'aside aside aside aside' 'footer footer footer footer';
+        }
+        span {
+            display: block;
+            text-align: center;
+        }
+    }
+    
+    @media only screen and (min-width: 801px) {
+        body {
+            background-color: darkslategrey;
+        }
+    }
+    /* Custom CSS */
+    
+    .bg-project {
+        background-color: wheat;
+    }
+    
+    .bdr-black {
+        border: 1.5px solid black;
+    }
+    
+    .bdr-round {
+        border-radius: 10px;
+    }
+    
+    .color-white {
+        color: white;
+    }
+    
+    .bg-dark {
+        background: rgb(75, 72, 72);
+    }
+    
+    .grid-gap1x {
+        gap: 1em;
+    }
+    
+    .padding23 {
+        padding: 23px;
+    }
+    
+    nav {
+        grid-area: navbar;
+        text-align: center;
+    }
+    
+    section {
+        grid-area: section;
+    }
+    
+    aside {
+        grid-area: aside;
+    }
+    
+    footer {
+        grid-area: footer;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <nav class="bg-project padding23 bdr-black bdr-round">
+            <span>Home</span>
+            <span>About</span>
+            <span>Services</span>
+            <span>Contact</span>
+        </nav>
+        <section class="bg-project padding23 bdr-black bdr-round">
+            <h2>Learn CSS in Hindi</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos nemo unde consectetur voluptates culpa adipisci fugiat perferendis ad tempora alias cumque architecto, corrupti sequi id itaque, sunt earum! Cum asperiores, odit repellat
+                exercitationem fugiat reiciendis nulla nobis rerum aliquam vero cupiditate molestias quasi molestiae libero quisquam obcaecati nostrum. Ab in suscipit, quia quos dolorum optio id repellendus est. Deserunt culpa atque quibusdam provident
+                nam ut error, ipsam nihil! Beatae sint amet ad dicta! Minima repudiandae sint exercitationem consequatur, accusamus quas suscipit molestias, consectetur inventore quam minus fugiat architecto iusto soluta voluptatem harum doloremque reiciendis
+                dolor quo repellendus. Quidem quasi cupiditate totam. Amet ea ratione at eaque corporis quis possimus est? Maiores laborum quos nemo saepe nisi beatae vel blanditiis temporibus, expedita nulla esse eum recusandae veritatis incidunt dolores
+                quaerat voluptates quibusdam magni quidem culpa aperiam? Accusamus, recusandae. Excepturi quos nihil consequuntur dicta mollitia natus quae culpa? Aliquam magnam at repellendus?</p>
+        </section>
+        <aside class="bg-project padding23 bdr-black bdr-round">
+            <h1>More About Us</h1>
+        </aside>
+        <footer class="bg-project padding23 bdr-black bdr-round">
+            This is Footer
+        </footer>
+    </div>
+</body>
+
+</html>

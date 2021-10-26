@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Strings and String Mathods</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Hello Friends I a Krishan Kumar</h1>
+        <div id="content"></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel ea doloribus sit qui repudiandae. Voluptates, molestiae odio error totam nobis eum cum atque. Quibusdam iste non harum? Quis illum dignissimos qui libero magni. Excepturi obcaecati corporis
+            facilis voluptate sit, nemo numquam doloremque aliquam ea in, molestiae quia voluptates delectus sapiente?</p>
+    </div>
+    <script>
+        var string = "this";
+        var name = "Krishn Kumar";
+        var web = "indiandexter.com"
+        var message = `${name} is a good boy`;
+        var temp = `${name} is a Programmer. His website is ${web} and ${message}`;
+        //below i am printing the value stored by temp
+        console.log(temp);
+
+        var len = name.length;
+        console.log(`Characters in My name is ${len}`);
+
+        // escape seqence Characters
+        // New Line Character is \n
+        console.log('My Name is Krishan Kumar\nI am a Pro\tgram\bmer.');
+        // Insert string dynamically in the DOM using JavaScript
+        document.getElementById("content").innerHTML = '<h3>This is H3 Heading which is dynamically inserted by JavaScript</h3>'
+    </script>
+</body>
+
+</html>
