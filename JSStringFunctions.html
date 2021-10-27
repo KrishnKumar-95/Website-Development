@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript String Functions</title>
+</head>
+
+<body>
+
+
+    <script>
+        var str = "This is String.";
+        console.log(str);
+
+        // This gives us first occurance of the string
+        var position = str.indexOf('is');
+        console.log(`First occurance of substring <is> is ${position}`);
+
+        // This gives us Last occurance of the string
+        // One we have given the position variable we need not to mention var position again just overwrite
+        position = str.lastIndexOf('is');
+        console.log(`Last occurance of substring <is> is ${position}`);
+
+        // Substring from a string
+        // slice also takes negetive values
+        // var substr = str.slice(5, 7);
+
+        // substring dont take negetive values and works same as slice
+        // var substr = str.substring(5, 7);
+
+        // takes first number starting letter and how much character we want to slice from string
+        // str.substr(<starting position> , <how much letters we want of that string>)
+        var substr = str.substr(1, 7);
+        console.log(substr)
+
+        // var replaced = str.replace('String', 'krishn');
+        // console.log(str);
+        // console.log(`String is replaced by krishn >> ${replaced}`);
+
+        var upcase = str.toUpperCase();
+        console.log('Turned to Uppercase >>', upcase);
+        console.log('Turned to Lowercase >>', upcase.toLowerCase());
+
+        // #Concatenation of two strings
+        var newString = str.concat(' My Name is Krishn.')
+        console.log(newString);
+
+        // #remove white spaces using << trim function >>
+        // this will remove WhiteSpaces from starting and end
+        var strWithWhitespaces = "    String     with  white spaces   ";
+        console.log(strWithWhitespaces);
+        console.log(strWithWhitespaces.trim());
+
+        // #We can also pick charcaters from a string using index number starting from 0 and then 1, 2.....
+        // var char2 = str.charAt(2);
+        var char2 = str.charCodeAt(2); //It will return character code UTF-16
+        console.log(char2);
+
+        // This will also return the character on the given index from desired string
+        console.log(str[2]);
+    </script>
+</body>
+
+</html>
