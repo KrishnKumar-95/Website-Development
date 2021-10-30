@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Array and Objects</title>
+</head>
+
+<body>
+    <div class="container">HTML Content</div>
+    <script>
+        let myVar = 34;
+        let myVar1 = "string";
+        let myVar2 = true;
+        let myVar3 = null;
+        let myVar4 = undefined;
+
+        // An Object
+        let employee = {
+            name: "Krishn Kumar",
+            salary: 10000,
+            channel: "indiandexter",
+            // If there is space between the name of the value then put it into the double qoutes
+            // and we cant take its output using following first output mathod
+            "full name": "Krishan Kumar",
+            website: "https://indiandexter.com"
+        }
+
+        // This way we can print the values of object employee
+        // console.log(employee);
+
+        // Output Mathods
+        // This way we can print the particular value of the object employee
+        // There are 2 differet ways that we can print the particular value of an object like employee
+        // console.log(employee.website);
+        // console.log(employee['website']);
+        // console.log(employee['full name']);
+
+
+        // Array
+
+        // There are two types we can define Array
+        // 1. Array as Array
+        // let name = [1, 2, 3, "krishn", undefined];
+
+        // 2. Array as object
+        // let name = new Array(5, 2, 3, "krishn", undefined);
+        // console.log(name);
+
+        let name = new Array(50);
+
+        // This will give you number of values stored in the Pre-Defined Array 
+        // console.log(name.length);
+
+        // This sort function is to sort the elements of the array in ascending order
+        name = name.sort();
+
+        // push function is to append the element in the array at the end
+        name.push("this element is pushed");
+        console.log(name);
+        console.log(name[50]);
+    </script>
+</body>
+
+</html>
