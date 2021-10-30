@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Interaction with Alert, Prompt, Confirm</title>
+</head>
+
+<body>
+    <div class="container">
+        This is a page
+    </div>
+
+    <script>
+        // Alert
+        // It does not return anything
+        // alert('This is a message');
+
+        // Prompt
+        // this will open a input box and paste the input value to the console.
+        // let name = prompt("What is your name?", "Enter your name...");
+        // console.log(name);
+
+        // Confirm
+        // This will double check the statement or action which we are going to perfrom.
+        // This will return the Boolean value true / false.
+        // >> If we press ok then it will return << true >>. 
+        // >> If we press cancle then this will return << false >>.
+        // let deletePost = confirm("Are you sure want to delete the post?");
+        // console.log(deletePost);
+
+        // if (deletePost) {
+        //     console.log("Your post have been deleted successfully");
+        // } else {
+        //     console.log("Your post haven't been deleted.")
+        // }
+
+        let age = prompt("What is your age?", "Enter your Age...");
+        // console.log(age);
+        if (age >= 18) {
+            console.log("You are eligible for Voting.")
+        } else {
+            console.log("You are not eligible to vote.")
+        }
+    </script>
+</body>
+
+</html>
