@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | For, White, forEach, DoWhile Loop</title>
+</head>
+
+<body>
+    <div class="container">
+        All about JavaScript Loops
+    </div>
+
+    <script>
+        console.log("JavaScript Loops Tutorial")
+
+        // let i = 0;
+        // for (i = 0; i <= 10; i++) {
+        //     console.log(i);
+        // }
+
+        let friends = ["Rohan", "Krishn", "Nidhi", "Sanjeev", "Naveen"];
+        // Following ways to print each value of the Array.
+
+        // console.log(friends.length);
+
+        // for (let index = 0; index < friends.length; index++) {
+        //     console.log("Hello, " + friends[index]);
+        // }
+
+        // Old JavaScript This function prints each value of a Defined Array.
+        // friends.forEach(function friendsPrint(element) {
+        //     console.log("Hello Friend, " + element + " to modern JavaScript.");
+        // });
+
+        // Modern JavaScript For-Of loop to print all the values of Array.
+
+        // for (element of friends) {
+        //     console.log("Hello Friend, " + element + " to modern JavaScript again with For-Of.");
+        // }
+
+        // // When we iterate an Object
+        // let employee = {
+        //     name: "Krishan Kumar",
+        //     salary: 10000,
+        //     designation: "Software Engineer",
+        //     website: "indiandexter.com",
+        //     channel: "indiandexter"
+        // };
+        // // This is For-In Loop used to iterate values of an object using its keys.
+        // for (key in employee) {
+        //     console.log(`The ${key} of employee is ${employee[key]}`);
+        // };
+
+        // Now We are discussing #While Loop
+        // this loop runs until the condition will be true
+        // let i = 0;
+        // while (i < 10) {
+        //     console.log(`${i} is less than 10`);
+        //     // the value will be updated
+        //     i++;
+        // };
+
+        // Now we are discussing about #Do-While Loop
+        // This will run the statement at least once before testing the statement either statement is true or false
+        // First the Do statement will be executed and then the statement will be checked and increment or decrement will be performed after checking the statement.
+        // let i = 50;
+
+        // // in case i value is greater than the conditional value then the statement will be executed once.
+        // do {
+        //     console.log(`${i} is less than 10.`);
+        //     i++;
+        // } while (i <= 10);
+
+        let i = 1;
+
+        // in case i value is greater than the conditional value then the statement will be executed once.
+        do {
+            console.log(`My name is Krishan Kumar.`);
+
+            // This will insert the string into the DOM ie HTML file.
+            document.write(`My name is Krishan Kumar.<br>`)
+            i++;
+        } while (i <= 10);
+    </script>
+</body>
+
+</html>
