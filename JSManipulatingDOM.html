@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Manipulating DOM</title>
+</head>
+
+<body>
+    <div id="main" class="container">
+        <ul id="nav">
+            <li>home</li>
+            <li>about</li>
+            <li>services</li>
+            <li>products</li>
+            <li>contact us</li>
+        </ul>
+
+        <div class="container">
+            it is another container class.
+        </div>
+        <script>
+            // using this we can lookup the html in the console and also can manipulate the DOM
+            // Expected Output
+            //     <div id="main" class="container">
+            //     <ul id="nav">
+            //         <li>home</li>
+            //         <li>about</li>
+            //         <li>services</li>
+            //         <li>products</li>
+            //         <li>contact us</li>
+            //     </ul>
+            // </div>
+            // because it is fetched using the ID main
+
+            // |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+            // let main = document.getElementById('main');
+            // console.log(main);
+
+            // let nav = document.getElementById('nav');
+            // console.log(nav);
+            // We can also manipulate DOM using the class name not just by using ID
+            // let container = document.getElementsByClassName('container');
+            // console.log(container);
+
+            // In case more than one class with same name output will be shown more than one classes
+            // container[0] >> will give you the first shown class
+            // container[1] >> will give the second shown class
+
+            //CSS Selectors are also be used to select elements
+            // This returns the first element having class container
+            // This can also take id and return the elements of the container
+            // let sel = document.querySelector('.container');
+
+            // This returns all the elements having class container
+            // let sel = document.querySelectorAll('.container');
+            // console.log('selector returns', sel);
+
+            // Using ID
+            // it gives us all the li of the container having id nav
+            // Otherwise It will give only first <<li>> in case of << document.querySelector >>
+            let sel1 = document.querySelectorAll('#nav>li');
+            console.log('selector returns', sel1);
+        </script>
+</body>
+
+</html>
