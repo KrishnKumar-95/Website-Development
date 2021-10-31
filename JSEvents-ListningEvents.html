@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Events & Listning Events</title>
+</head>
+<style>
+    /* paragraph to beautify the button */
+    
+    #btn {
+        border: 2px solid black;
+        background-color: red;
+        color: white;
+        padding: 10px 14px;
+        border-radius: 5px;
+    }
+    
+    #para {
+        border: 2px solid black;
+        background-color: coral;
+        padding: 15px 20px;
+        border-radius: 23px;
+    }
+</style>
+
+<body>
+    <h1>This is My Heading</h1>
+    <p id="para">Hello Friend, how are you are you learning JavaScript today i have learnt it before you.
+    </p>
+    <button id="btn" onclick="toggleHide();">Show/Hide- MSG</button>
+</body>
+
+<script>
+    let para = document.getElementById('para');
+
+    // Using this event when we hover the cursor on the para
+    // It shows a message.
+    para.addEventListener('mouseover', function run() {
+        console.log('Mouse went inside the Paragraph');
+    })
+
+    // Using this event when we hover the cursor outside the para
+    // It shows a message.
+    para.addEventListener('mouseout', function run() {
+        console.log('Mouse went outside the Paragraph');
+    })
+
+    // This is the Function to show or hide the given para on the screen
+
+    function toggleHide() {
+
+        // first introduce both the ids in the function locally
+        // We also need not to define these ids
+        // because ids acts as global variable in the program
+        // let btn = document.getElementById('btn');
+        // let para = document.getElementById('para');
+
+        // here we defined the id name << para >> of the paragraph
+        if (para.style.display != 'none') {
+
+            para.style.display = 'none';
+        } else {
+            para.style.display = 'block';
+        }
+    }
+</script>
+
+</html>
