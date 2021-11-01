@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | SetTimeOut & ClearTimeOut</title>
+</head>
+
+<body>
+    <div class="container">The time is <span id="time"></span></div>
+</body>
+<script>
+    console.log('This is Tutorial of SetTimeOut-ClearTimeOut');
+
+    function greet(name, byeText) {
+        console.log('Hello gopal how are you. My phone no is ' + name + " " + byeText)
+    }
+    // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    // This function is to display the real time on the website
+    function displaytime() {
+        time = new Date();
+        // below commented code is to run the timein the console
+        // console.log(time);
+        // below code is to run the time in the web page
+        document.getElementById('time').innerHTML = time;
+    }
+
+    // This refresh the clock at every 1 sec.
+    // setInterval(displaytime, 1000);
+
+    // --------------------------------------------------------------------------------------------------------------------------------------------
+    // setTimeout --> Allows us to run the function once after the interval of time
+    // clearTimeout --> Allows us to run the function repeatedly after the interval of time
+
+    // The given time is in ms(miliseconds) after that time interval the message will be printed
+    // --------------------------------------------------------------------------------------------------------------------------------------------
+    // we can pass the variable as the third argument fourth argument and so on...
+    // setTimeout(<Function_Name>,<Time-in-ms>,<Third-Argument>, so-on);
+    // We don't have to call the function using << greet() >> we just mention the name of it << greet >>.
+    // let timeOut = setTimeout(greet, 5000, "9518297071", "TakeCare.");
+    // console.log(timeOut);
+    // --------------------------------------------------------------------------------------------------------------------------------------------
+    // This is to clear the timeout message  in case there is no need to run the timeout message
+    // clearTimeout(timeOut);
+    // --------------------------------------------------------------------------------------------------------------------------------------------
+    // This function is to repeatedly run the function at set time interval.
+    // let intervalId = setInterval(greet, 1000, "9518297071", "TakeCare.");
+    // clearInterval(intervalId);
+</script>
+
+</html>
