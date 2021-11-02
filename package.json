@@ -5,6 +5,7 @@
   "main": "NodeJS.js",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "event": "^1.0.0",
     "express": "^4.17.1",
     "express-rate-limit": "^5.4.0",
     "formidable": "^1.2.2",
