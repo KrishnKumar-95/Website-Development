@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | JSON Tutorial</title>
+</head>
+
+<body>
+    <div class="container">This is my Container</div>
+
+    <script>
+        // defining an object with thier respective keys
+        let jsonObj = {
+            name: "Krishn Kumar",
+            channel: "indiandexter",
+            website: "https://indiandexter.com",
+            phone: 9518297071,
+            pin: 135003
+        }
+        console.log(jsonObj);
+
+        // We can convert Object into JSON-String using << stringify >>
+        let json_str = JSON.stringify(jsonObj);
+        console.log('This JSON-String is made of Object >> ', json_str);
+
+        // We can convert a JSON-String into Object using << parse >>
+        let newjson_str = JSON.parse(json_str);
+        console.log("This object is made of JSON-String >> ", newjson_str);
+
+        // We can replace any value using this mathod
+        // json_str = json_str.replace('Krishn Kumar', 'Krishn');
+        // console.log(json_str);
+    </script>
+</body>
+
+</html>
