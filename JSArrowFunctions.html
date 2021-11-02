@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Arrow Functions</title>
+</head>
+
+<body>
+    <div class="contianer">This is Arrow Function Tutorial</div>
+
+    <script>
+        // There are many types that we can write Functions in the JavaScript
+        // Arrow Functions provides us the shortcut to write the functions.
+
+        // This is the Traditional mathod to define the function in JavaScript
+        // function greet() {
+        //     console.log("Good Morning World");
+        // }
+        // greet();
+
+        // But there is shortcut way to define the function in the JavaScript
+        // We dont have to write the function again and again just write the function name and put the arrow and start the function
+        // greet = () => {
+        //     console.log("Good Morning World")
+        // }
+
+        // Calling of greet function
+        // greet();
+
+        // This arrow function will return the addition of 2 numbers
+        // sum = (a, b) => {
+        //     return a + b;
+        // }
+
+        // Let me short the code more
+        // below is the short form of code which can be defined in single line
+        sum = (a, b) => a + b;
+
+        // Now i am going to short the code more
+        // We also dont even need to enclosed the parameter in bracketts
+        half = a => a / 2;
+
+        // If there is no argument or no parameter to pass through the function then we have to mention bracketts
+        greet = () => console.log("Good Morning World");
+
+        // This will print the message after 3 sec in the console
+        // setTimeout(() => {
+        //     console.log('We are inside the SETTIMEOUT')
+        // }, 3000);
+
+        let obj1 = {
+            greeting: "Good Morning ",
+            names: ['krishn', 'arjun', 'shalini', 'krishna jewellers'],
+            speak() {
+                // Here << this.names >> means << names >> key of this object which is mentioned above using << this >> we locate the key
+
+                // *IMPORTANT*
+                // If we dont use arrow function then << this >> will not work outside function
+                // If we use arrow funtion then << this >> will work outside the function and can get the values from the outside object.
+
+                this.names.forEach((student) => {
+                    console.log(this.greeting + "Hello " + student)
+                })
+            }
+        }
+        obj1.speak();
+    </script>
+</body>
+
+</html>

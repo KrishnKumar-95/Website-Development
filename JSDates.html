@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Dates</title>
+</head>
+<style>
+    .container {
+        border: 2px solid black;
+        background-color: blanchedalmond;
+        padding: 23px;
+        text-align: center;
+        border-radius: 15px;
+        font-size: 23px;
+    }
+    
+    #time {
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <div class="container">
+        The Current time is >>
+        <span id="time"></span>
+    </div>
+
+    <script>
+        console.log('This is Date and Time Tutorial.');
+        // This reflects us the date and time of the runtime of this program
+        // and this will not be refreshed because #setInterval function is not defined
+        let now = new Date();
+        console.log(now);
+
+        // This will give the following output 
+        // Thu Jan 01 1970 05:30:00 GMT+0530 (India Standard Time)
+        // the parameter which is passed through date function is the time in miliseconds
+        // If we pass 1000 it will push the clock 1 sec ahead of the time shown above
+        // let dt = new Date(0);
+        // console.log(dt);
+
+        // Another mathod to get the date
+        // let newDate = new Date('2029-09-30');
+        // console.log(newDate);
+
+        // print the date using full format
+        // let newDate = new Date(year, month, date, hours, minutes, seconds, milliseconds);
+        let newDate1 = new Date(2021, 10, 1, 5, 31, 00, 00);
+        console.log(newDate1);
+
+        // Get the year of pre-mentioned date
+        // let yr = newDate1.getFullYear();
+
+        // Get the Hours of the pre-Defined date
+        // let yr = newDate1.getHours();
+
+        // Get the total milliseconds from the start clock of the pre-Defined date
+        let yr = newDate1;
+
+        // Here we can set the new date using setDate() function in the Pre-Defined Date 
+        newDate1.setDate(5);
+        console.log(yr);
+
+        // This returns the time in Milliseconds from the start date of the clock which is >> Thu Jan 01 1970 05:30:00 GMT+0530
+        console.log(Date.now());
+
+        function thisTime() {
+            time.innerHTML = new Date();
+        }
+
+        setInterval(thisTime, 1000);
+    </script>
+</body>
+
+</html>
