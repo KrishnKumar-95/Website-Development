@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Math Object</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>This is Math Object Tutorial</h1>
+    </div>
+</body>
+
+<script>
+    // Printing the Math Object
+    let m = Math;
+    console.log(m);
+
+    // PRinting constrants of the Math Object
+    // << E >> is Euler's number
+    console.log('The value of Math.E is-->', Math.E);
+    console.log('The value of Math.LN2 is-->', Math.LN2);
+    console.log('The value of Math.LN10 is-->', Math.LN10);
+    console.log('The value of Math.LOG2E is-->', Math.LOG2E);
+    console.log('The value of Math.LOG10E is-->', Math.LOG10E);
+    // This is the value of PI
+    console.log('The value of Math.PI is-->', Math.PI);
+    console.log('The value of Math.SQRT1_2 is-->', Math.SQRT1_2);
+    console.log('The value of Math.SQRT2 is-->', Math.SQRT2);
+
+    // E: 2.718281828459045
+    // LN2: 0.6931471805599453
+    // LN10: 2.302585092994046
+    // LOG2E: 1.4426950408889634
+    // LOG10E: 0.4342944819032518
+    // PI: 3.141592653589793
+    // SQRT1_2: 0.7071067811865476
+    // SQRT2: 1.4142135623730951
+
+    // Printing the Functions from the Math Object
+    let a = 55.5;
+    let b = 25;
+    console.log('The value of a and b is >> ', a, b);
+
+    // This Math.round function round up the number with previous number if it has decimal value lower than 5
+    // and round up the number with next number if it has decimal value greater than 5
+    console.log('The value of a and b is >> ', Math.round(a), Math.round(b));
+
+    // We calculate the powers of any value
+    // This return the values equals to 3ᵔ2
+    console.log('3 raised to the power of 2 is ', Math.pow(3, 2));
+    console.log('2 raised to the power of 12 is ', Math.pow(2, 12));
+    console.log('2 raised to the power of 3 is ', Math.pow(2, 3));
+
+    // The Square Root function
+    console.log('The Square root of 144 is ', Math.sqrt(144));
+    console.log('The Square root of 100 is ', Math.sqrt(100));
+    // we also can square root the non-perfect-square.
+    console.log('The Square root of 50 is ', Math.sqrt(50));
+
+    // >> Ceil and Floor Function
+    // Ceil >> it will be shifted to next number and ignore the decimal value.
+    // Floor >> it will be shifted to previous number and ignore the decimal value.
+    console.log('The Square root of 5.7 is ', Math.ceil(5.7));
+    console.log('The Square root of 5.7 is ', Math.floor(5.7));
+
+    // Absolute Function
+    // Abs >> This function returns the absolute value of the number.
+    // This also absolute the negetive number to the positive number.
+    console.log('Absolute Function of 5.66 is ', Math.abs(5.66));
+    console.log('Absolute Function of -5.66 is ', Math.abs(-5.66));
+
+    // Trigonometric Functions
+    console.log('The value of sin(PI) is ', Math.sin(Math.PI));
+    console.log('The value of sin(PI) is ', Math.sin(Math.PI));
+    console.log('The value of sin(90) is ', Math.sin(90));
+    console.log('The value of tan(PI) is ', Math.tan(Math.PI));
+    console.log('The value of cos(0) is ', Math.cos(0));
+
+    // Min & Max Functions
+    console.log('Minimum number among 4, 5 & 6 is >>', Math.min(4, 5, 6));
+    console.log('Maximum number among 4, 5 & 6 is >>', Math.max(4, 5, 6));
+
+    // Generating a random Number
+    let randNum = Math.random();
+    console.log('The random number is -->', randNum);
+
+    // Generating a random number between two given numbers.
+    let a1 = 1;
+    let b1 = 50;
+    // if << Math.random() >> is 1 then b1 will be printed as the random number because a1 will be deleted by itself
+    let rand1_50 = a1 + (b1 - a1) * Math.random();
+    console.log('My Generated random number between 1-50 is --> ', rand1_50);
+</script>
+
+</html>
