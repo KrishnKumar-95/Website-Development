@@ -4,7 +4,7 @@ const express = require('express');
 // initialize the app using express function
 const app = express();
 
-// defined the port for further use..
+// defined the port for further use.
 const port = 3000;
 
 // get request takes callback function which takes two parameters (req, res)
