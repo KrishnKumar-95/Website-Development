@@ -1,11 +1,24 @@
 // included the express module for further use
 const express = require('express');
+const path = require('path');
 
 // initialize the app using express function
 const app = express();
 
 // defined the port for further use.
 const port = 3000;
+
+// for serving static files
+app.use('/static', express.static('static'));
+
+// set template engine as pug
+app.set('view engine', 'pug');
+app.set('views', path.join(__dirname, 'views'));
+
+//our pug demo endpoint
+app.get('/demo', (req, res) => {
+    res.status(200).render('demo', { title: 'Hey krishn', message: 'Hello there! and thanks to teach me how to use Template Engine.' });
+});
 
 // get request takes callback function which takes two parameters (req, res)
 app.get('/', (req, res) => {
