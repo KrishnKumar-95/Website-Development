@@ -1,12 +1,12 @@
 {
   "name": "websitedevelopment",
   "version": "1.0.0",
-  "description": "Package we created while studying and exploring Node and Express",
+  "description": "this is package we are studying and exploring express and node",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Krishn Kumar",
+  "author": "Krishan Kumar",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1"
