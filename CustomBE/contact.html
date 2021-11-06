@@ -5,11 +5,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CustomBE | Contact</title>
+    <title>CustomBE | Home</title>
 </head>
+<style>
+    ul {
+        display: flex;
+        list-style: none;
+        flex-direction: row;
+    }
+    
+    ul li {
+        margin: 12px;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: seagreen;
+    }
+    
+    ul li:hover {
+        background-color: yellowgreen;
+    }
+    
+    ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+    
+    ul li:hover a {
+        color: black;
+    }
+    
+    .navContianer {
+        background-color: wheat;
+    }
+</style>
 
 <body>
-    This is Contact Section.
+    <div class="navContianer">
+        <nav>
+            <ul>
+                <li class="item"><a href='/'>Home</a></li>
+                <li class="item"><a href='/about'>About</a></li>
+                <li class="item"><a href='/services'>Services</a></li>
+                <li class="item"><a href='/contact'>Contact</a></li>
+            </ul>
+        </nav>
+    </div>
 </body>
 
 </html>
