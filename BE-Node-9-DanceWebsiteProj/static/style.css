@@ -1,0 +1,191 @@
+/* Imported Alegreya font from Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@800&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#logo {
+    display: flex;
+    color: white;
+    align-items: center;
+    margin: 0 14px;
+    margin-right: 50px;
+    font-size: 19px;
+}
+
+#logo img {
+    filter: invert(1);
+    height: 60px;
+}
+
+#logoFoot {
+    display: flex;
+    color: white;
+    align-items: center;
+    /* margin: 0 14px; */
+    /* font-size: 19px; */
+}
+
+#logoFoot img {
+    filter: invert(1);
+    height: 60px;
+}
+
+#navbar {
+    background-color: rgb(218, 160, 14);
+    padding: 5px;
+    font-family: 'Alegreya';
+    display: flex;
+    flex-direction: row;
+}
+
+#navItems {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#navbar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#navbar ul li {
+    list-style-type: none;
+    margin: 2px 8px;
+    padding: 8px 2px;
+    border: 1px solid transparent;
+    /* background-color: black; */
+    /* border-radius: 8px; */
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 13px;
+}
+
+#navbar ul li a:hover {
+    color: crimson;
+}
+
+
+/* Background Section */
+
+#introSection {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    font-size: 40px;
+    padding-top: 40px;
+    background: center / cover no-repeat url(/static/bgDance1.jpg);
+    height: 340px;
+    font-family: 'Alegreya';
+}
+
+#introSection div.subHead {
+    font-size: 1.3rem;
+}
+
+#sponsorsSection {
+    /* height: 200px; */
+    display: flex;
+    justify-content: space-between;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    flex-direction: column;
+}
+
+#sponsorsSection h2 {
+    text-align: center;
+    font-family: 'Alegreya';
+    font-size: 30px;
+    padding-bottom: 5px;
+    margin-bottom: 50px;
+}
+
+#sponsors {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+
+#sponsors img {
+    height: 90px;
+    display: flex;
+}
+
+#missionSection {
+    height: 300px;
+    padding-top: 12px;
+    /* display: flex; */
+    /* flex-direction: column; */
+}
+
+#missionSection h2 {
+    text-align: center;
+    font-family: 'Alegreya';
+    font-size: 30px;
+}
+
+.cardBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.card {
+    /* display: inline-block; */
+    border: 2px solid black;
+    font-family: serif;
+    border-radius: 8px;
+    width: 25%;
+    height: 210px;
+    margin: 10px;
+    background: rgb(240, 245, 245);
+}
+
+.cardItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.cardImg img {
+    height: 90px;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.cardCon {
+    padding: 5px;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.card h3 {
+    text-align: center;
+    margin: 12px;
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65px;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-family: 'Alegreya';
+}

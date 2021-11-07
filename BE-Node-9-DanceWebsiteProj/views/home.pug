@@ -1,0 +1,48 @@
+extends base.pug
+
+//- included JS File
+block scripts
+    script(src='/static/index.js')
+
+//- included CSS File
+block style 
+    style 
+        include ../static/style.css
+
+block content
+    section#introSection 
+        div Welcome to Krishna Dance Academy  
+        div.subHead Eat > Dance > Sleep > Repeat 
+    
+    section#missionSection 
+        h2 Our Mission 
+        div.cardBox
+            div.card
+                h3 Bhangra
+                div.cardItem
+                    div.cardImg
+                        img(src="/static/Dance-PNG-File-Download-Free.png", alt="")
+                    div.cardCon
+                        p Bhangra related to Punjab Region. This dance is Traditional Dance  of Punjab. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            div.card
+                h3 Classical
+                div.cardItem
+                    div.cardImg
+                        img(src="/static/Dance-PNG-Download-Image.png", alt="")
+                    div.cardCon
+                        p Indian Classical Dance is an umbrella term used for various performance arts rooted in musical theater.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            div.card
+                h3 Hip-Hop 
+                div.cardItem
+                    div.cardImg
+                        img(src="/static/Dance-PNG.png", alt="")
+                    div.cardCon
+                        p Hip-Hop dance is an umbrella term used to refer Street Dance performed on Hip-Hop Music. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+
+    section#sponsorsSection 
+        h2 Our Sponsors 
+        div#sponsors
+            img(src="/static/fr.png", alt="sponsor", Class="spImage")
+            img(src="/static/adidas.png", alt="sponsor", Class="spImage")
+            img(src="/static/twitter.png", alt="sponsor", Class="spImage")
+            img(src="/static/youtube.png", alt="sponsor", Class="spImage")

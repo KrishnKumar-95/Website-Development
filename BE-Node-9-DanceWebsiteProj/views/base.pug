@@ -1,0 +1,40 @@
+//- This is actually a Template of our webpage
+//- All its fields will be replaced by the file elements one by one which extends this << base.pug >>
+
+doctype html
+html
+  head
+    title Krishna Dance Academy 
+    block scripts
+    //- << block scripts >> will be replaced by << script(src='/static/index.js') >> which is defined in << home.pug >>
+    //- because << home.pug >> extends this << base.pug >> 
+
+    block style 
+    //- same this block of code replaced by below code which is defined as the value of block style in << home.pug >>    
+    //- style 
+            include ../static/style.css
+    
+    //- SAME AS ALL THE VALUES ARE TO BE REPLACED BY THE VALUES DEFINED IN << HOME.PUG >> WHICH EXTENDS << BASE.PUG >>
+
+  body
+    nav#navbar
+        div#logo
+            img(src="/static/logo.png", alt="logo")
+            | KDA
+        div#navItems
+            ul 
+                li #[a(href="/") Home]
+                li #[a(href="/") About]
+                li #[a(href="/") Services]
+                li #[a(href="/contact") Contact Us]
+                li #[a(href="/") Class info]
+                
+    block content
+    footer#footer 
+        | Copyright 2021 |
+        div#logoFoot
+            img(src="/static/Dance-PNG.png", alt="logo")
+            | | Krishna Dance Academy | All rights reserved
+
+
+//- THIS PROCEDURE IS SAME AS THE PROCESS OF OFFLINE FORM FILLING EVERY STUDENT PURCHASES THE FORM AND FILL ITS DETAILS IN THE PRE MENTIONED FIELDS SAME HERE FILE VALUES WILL BE FILLED IN THE BASE.PUG
