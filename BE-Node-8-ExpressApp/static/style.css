@@ -1,3 +1,68 @@
 * {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: khaki;
+    padding: 12px 12px;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
+
+ul li {
+    list-style: none;
+    padding: 10px 15px;
+    background-color: forestgreen;
+    margin: 5px 8px;
+    border: 1px solid transparent;
+    border-radius: 15px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+body::before {
+    content: "";
+    height: 800px;
+    width: 100%;
+    top: 0px;
+    position: absolute;
+    background: url('/static/5004191974_b113019f31_o.jpg') no-repeat;
+    z-index: -1;
+}
+
+.container {
+    /* background: url('https://images.hindustantimes.com/img/2021/09/22/550x309/malaika_arora_1632304999083_1632305032479.jpg') center center; */
+    max-width: 70%;
+    margin: 12px;
+}
+
+input,
+textarea {
+    display: block;
+    padding: 5px 10px;
+    margin: 10px auto;
+    width: 60%;
+    outline: none;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.btn {
+    display: block;
+    margin: 5px auto;
+    padding: 5px;
+    cursor: pointer;
 }
