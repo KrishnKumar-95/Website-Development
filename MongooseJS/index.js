@@ -4,7 +4,7 @@ mongoose.connect('mongodb://localhost/krishnKart', { useNewUrlParser: true, useU
 
 var db = mongoose.connection;
 
-// db.on('error', console.error.bind(console, 'connecction error:'));
+// db.on('error', console.error.bind(console, 'connection error:'));
 // db.once('open', function() {
 //     console.log('We are connected...')
 // })
