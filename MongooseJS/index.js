@@ -1,3 +1,5 @@
+// MongooseJs to Connect with Database
+
 const mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/krishnKart', { useNewUrlParser: true, useUnifiedTopology: true });
