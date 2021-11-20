@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #map {
+            width: 100vw;
+            height: 100vh;
+        }
+        
+        .mapboxgl-popup {
+            max-width: 400px;
+            font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        }
+    </style>
+    <title>Corona Map</title>
+</head>
+
+<body>
+    <div id='map'></div>
+
+</body>
+
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1Ijoia3Jpc2huLWt1bWFyIiwiYSI6ImNrdzdyY29hbzA4bTgycGxmMzBzMm5kaXcifQ.O439ZUu1H9DQppXUWzNTIg';
+    const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/dark-v10',
+        zoom: 1,
+    });
+
+    // Fetch API to Load Data
+    fetch("data.json")
+        .then(response => response.json())
+        .then(rsp => {
+            rsp.data.forEach(element => {
+
+                longitude = element.longitude;
+                latitude = element.latitude;
+                cases = element.infected;
+                city = element.name;
+
+                function loadData(x, y) {
+
+                    map.on('load', () => {
+                        map.addSource('places', {
+                            'type': 'geojson',
+                            'data': {
+                                'type': 'FeatureCollection',
+                                'features': [{
+                                    'type': 'Feature',
+                                    'properties': {
+                                        'description': `<strong>${city}</strong><p>Present Cases: ${cases}</p>`
+                                    },
+                                    'geometry': {
+                                        'type': 'Point',
+                                        'coordinates': [longitude, latitude]
+                                    }
+                                }]
+                            }
+                        });
+
+                        // Add a layer showing the places.
+                        map.addLayer({
+                            'id': 'places',
+                            'type': 'circle',
+                            'source': 'places',
+                            'paint': {
+                                'circle-color': `rgb(${cases},0,0)`,
+                                'circle-radius': 6,
+                                'circle-stroke-width': 3,
+                                'circle-stroke-color': '#ffffff'
+                            }
+                        });
+                    });
+                }
+                loadData(longitude, latitude);
+
+                // Create a popup, but don't add it to the map yet.
+                const popup = new mapboxgl.Popup({
+                    closeButton: false,
+                    closeOnClick: false
+                });
+
+                map.on('mouseenter', 'places', (e) => {
+                    // Change the cursor style as a UI indicator.
+                    map.getCanvas().style.cursor = 'pointer';
+
+                    // Copy coordinates array.
+                    const coordinates = e.features[0].geometry.coordinates.slice();
+                    const description = e.features[0].properties.description;
+
+                    // Ensure that if the map is zoomed out such that multiple
+                    // copies of the feature are visible, the popup appears
+                    // over the copy being pointed to.
+                    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+                    }
+
+                    // Populate the popup and set its coordinates
+                    // based on the feature found.
+                    popup.setLngLat(coordinates).setHTML(description).addTo(map);
+                });
+
+                map.on('mouseleave', 'places', () => {
+                    map.getCanvas().style.cursor = '';
+                    popup.remove();
+                });
+            });
+        })
+</script>
+
+<script src="index.js"></script>
+
+</html>

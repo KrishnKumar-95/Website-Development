@@ -1,0 +1,4 @@
+// First we are going to use #MapBox >> Online Maps provider
+
+// we are using FetchApi to fetch the data from internet or from a local file
+wheter it is text format or JSON format
