@@ -46,45 +46,43 @@
         .then(rsp => {
             rsp.data.forEach(element => {
 
-                    longitude = element.longitude;
-                    latitude = element.latitude;
-                    cases = element.infected;
-                    city = element.name;
+                    // longitude = element.longitude;
+                    // latitude = element.latitude;
+                    // cases = element.infected;
+                    // city = element.name;
 
 
                     // longitude, latitude, infected, name
                     map.on('load', () => {
-                        rsp.data.forEach(element => {
-                                map.addSource('places', {
-                                    'type': 'geojson',
-                                    'data': {
-                                        'type': 'FeatureCollection',
-                                        'features': [{
-                                            'type': 'Feature',
-                                            'properties': {
-                                                'description': `<strong>${element.name}</strong><p>Present Cases: ${element.infected}</p>`
-                                            },
-                                            'geometry': {
-                                                'type': 'Point',
-                                                'coordinates': [element.longitude, element.latitude]
-                                            }
-                                        }]
+                        map.addSource('places', {
+                            'type': 'geojson',
+                            'data': {
+                                'type': 'FeatureCollection',
+                                'features': [{
+                                    'type': 'Feature',
+                                    'properties': {
+                                        'description': `<strong>${element.name}</strong><p>Present Cases: ${element.infected}</p>`
+                                    },
+                                    'geometry': {
+                                        'type': 'Point',
+                                        'coordinates': [element.longitude, element.latitude]
                                     }
-                                });
-                            }),
+                                }]
+                            }
+                        });
 
-                            // Add a layer showing the places.
-                            map.addLayer({
-                                'id': 'places',
-                                'type': 'circle',
-                                'source': 'places',
-                                'paint': {
-                                    'circle-color': `rgb(${cases},0,0)`,
-                                    'circle-radius': 6,
-                                    'circle-stroke-width': 3,
-                                    'circle-stroke-color': '#ffffff'
-                                }
-                            });
+                        // Add a layer showing the places.
+                        map.addLayer({
+                            'id': 'places',
+                            'type': 'circle',
+                            'source': 'places',
+                            'paint': {
+                                'circle-color': `rgb(${cases},0,0)`,
+                                'circle-radius': 6,
+                                'circle-stroke-width': 3,
+                                'circle-stroke-color': '#ffffff'
+                            }
+                        });
 
                     });
                 } // loadData end
