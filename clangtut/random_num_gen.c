@@ -1,6 +1,8 @@
 // This is Random Number Guessing Game
 // Guessing the number in lowest attempts will be the winner
 
+// with Guide..
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -25,9 +27,15 @@ int main()
 
     do
     {
-        // Taking input from the user
+        // Taking input from the user and match with the system generated Random number either it is equal or not.
         printf("Guess the number between 1 to 100. : ");
         scanf("%d", &guess);
+
+        // Just Uncomment below code to make this process automatic because it will automatically guess the number and match this number with the previous generated number and show that how much attempts it takes to guess the number right.
+        // srand(time(0));
+        // guess = rand() % 100 + 2;
+
+        printf("The system Generated random number for matching is :> %d\n", guess);
 
         if (guess > number)
         {
