@@ -1,4 +1,9 @@
 {
     "editor.mouseWheelZoom": true,
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "files.associations": {
+        "*.html": "html",
+        "numeric": "c",
+        "math.h": "c"
+    }
 }
