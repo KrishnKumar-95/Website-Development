@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoronaVirus - Information</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@500&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    nav {
+        display: flex;
+        padding: 0 23px;
+        background-color: rgba(0, 0, 0, 0.753);
+    }
+    
+    .items {
+        list-style: none;
+        padding: 3px 23px;
+    }
+    
+    .items a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        padding: 18px 0px;
+        font-size: 19px;
+        font-family: 'Red Hat Mono', monospace;
+        transition: all 0.75s;
+    }
+    
+    .items a:hover {
+        color: red;
+        /* box-shadow: 5px 5px rgba(0, 0, 0, 0.377); */
+        transform: translateY(-2.5px);
+    }
+    
+    .container {
+        width: 70%;
+        border-radius: 15px;
+        margin: 12px auto;
+        padding: 46px;
+        transition: all 0.5s;
+        height: 250vh;
+        background-color: white;
+        font-family: 'Red Hat Mono', monospace;
+    }
+    
+    .container:hover {
+        box-shadow: 5px 5px rgba(0, 0, 0, 0.377);
+    }
+    
+    .container h2 {
+        text-align: center;
+    }
+    
+    body {
+        background: url("bg.jpg");
+    }
+    
+    @media(max-width: 870px) {
+        nav {
+            flex-direction: column;
+        }
+    }
+</style>
+
+<body>
+    <nav>
+        <li class="items">
+            <a href="#">Home</a></li>
+        <li class="items">
+            <a href="#">About</a></li>
+        <li class="items">
+            <a href="#">MHFW Website</a></li>
+        <li class="items">
+            <a href="#">Hospitals</a></li>
+        <li class="items">
+            <a href="#">Contact Us</a></li>
+    </nav>
+    <div class="container">
+        <h2>Kameeno Ghar par raho</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi facilis adipisci voluptatum, velit consectetur consequuntur fugiat, beatae architecto debitis, aut accusantium autem? Aspernatur, error quaerat nihil tenetur sapiente obcaecati sequi.</p>
+    </div>
+</body>
+
+</html>

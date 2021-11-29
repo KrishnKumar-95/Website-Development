@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat app Realtime</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav>
+        <img class="logo" src="/logo.png" alt="">
+        <h2>Welcome to ChatNow | by Krishn Kumar </h2>
+    </nav>
+    <div class="container">
+        <div>You can chat in this App with your friends.</div>
+    </div>
+    <div class="send">
+        <form action="#" id="send-container">
+            <input type="text" id="msgInp" class="mgsInp">
+            <button class="btn" type="submit">Send</button>
+        </form>
+    </div>
+</body>
+<!-- defer script run after the DOM is loaded -->
+<!-- in this case script is loaded and it will execute when after the DOM is executed -->
+<script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+<script defer src="js/client.js"></script>
+
+</html>

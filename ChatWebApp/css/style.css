@@ -1,0 +1,94 @@
+body {
+    background: #075E54;
+}
+
+h2 {
+    margin-top: 15px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.logo {
+    display: block;
+    margin: auto;
+    height: 70px;
+    width: 70px;
+}
+
+.container {
+    max-width: 855px;
+    background-color: #20c287;
+    margin: auto;
+    height: 70vh;
+    padding: 5px;
+    /*when there will be tons of msgs this property will make scroll view */
+    overflow-y: auto;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.message {
+    color: white;
+    font-weight: bold;
+    background-color: #075E54;
+    padding: 10px;
+    margin: 8px;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 40%;
+    /* box-shadow: L/R U/D OPACITY SPREADITY COLOR; */
+}
+
+.left {
+    float: left;
+    /*using clear property floating elements dont allow to float both sides*/
+    clear: both;
+    box-shadow: -3px 5px 5px 1px #075E54;
+}
+
+.right {
+    float: right;
+    /*using clear property floating elements dont allow to float both sides*/
+    clear: both;
+    box-shadow: 3px 5px 5px 1px #075E54;
+}
+
+#send-container {
+    display: block;
+    margin: auto;
+    text-align: center;
+    max-width: 855px;
+    width: 100%;
+}
+
+#msgInp {
+    width: 84%;
+    height: 34px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.btn {
+    width: 120px;
+    height: 40px;
+    font-size: 18px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+
+/* @media(max-width: 550px) {
+    nav {
+        width: auto;
+        display: block;
+        margin: auto;
+    }
+    .container {
+        text-align: center;
+    }
+    body {
+        display: block;
+        margin: auto;
+    }
+} */

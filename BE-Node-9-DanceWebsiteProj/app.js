@@ -26,8 +26,6 @@ const mongoose = require('mongoose');
 // here we are connecting to the Database contactDance
 mongoose.connect('mongodb://localhost/contactDance', { useNewUrlParser: true });
 
-
-
 // Here we are define mongoose Schema
 // const <schema-name> = new mongoose.Schema({
 const contactSchema = new mongoose.Schema({
@@ -40,7 +38,7 @@ const contactSchema = new mongoose.Schema({
 });
 
 // HERE WE ARE COMPILING OUR SCHEMA INTO MODEL
-// Here Newly created Model using contactSchema properties ie:- name has String type DataType
+// Here Newly created Model use contactSchema properties ie:- name has String type DataType
 // const <Model-Variable-Name> = mongoose.model('<Model-Name>', <Schema-Name>);
 const Contact = mongoose.model('Contact', contactSchema);
 
