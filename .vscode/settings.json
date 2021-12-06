@@ -5,5 +5,7 @@
         "*.html": "html",
         "numeric": "c",
         "math.h": "c"
-    }
+    },
+    "cmake.configureOnOpen": false,
+    "C_Cpp.errorSquiggles": "Disabled"
 }
