@@ -1,0 +1,16 @@
+{
+  "name": "code-hands",
+  "version": "1.0.0",
+  "description": "I am Creating Blog using NodeJS-HandleBars",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Krishn-Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
+    "nodemon": "^2.0.15"
+  }
+}

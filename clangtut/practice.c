@@ -2375,7 +2375,7 @@ int main()
 }*/
 
 // 73.A positive integer is entered through the keyboard, write a function to find the binary equivalent of this number using recursion
-#include <stdio.h>
+/*#include <stdio.h>
 int binary(int number)
 {
     if (number == 0)
@@ -2394,4 +2394,239 @@ int main()
     scanf("%d", &num);
     printf("Decimal\t-\tBinary\n- - - - - - - - - - - -\n%d\t-\t%d\n", num, binary(num));
     return 0;
+}*/
+
+// 74.Write a recursive function to obtain the running sum of first 25 natural numbers.
+/*#include <stdio.h>
+
+int sumNatural(int num)
+{
+    if (num == 0)
+    {
+        return 0;
+    }
+    else
+    {
+        return num + sumNatural(num - 1);
+    }
 }
+int main()
+{
+    int num;
+    printf("Enter the number until you want sum of Natural numbers :- ");
+    scanf("%d", &num);
+    printf("The sum of the %d Natural numbers is :- %d\n", num, sumNatural(num));
+    return 0;
+}*/
+
+// 75.Given three variables x, y, z, write a function to circularly shift their values to right. In other words if
+// x = 5, y = 8, z = 10 after circular shift
+// y = 5, z = 8, x = 10 after circular shift
+// y = 5, z = 8, x = 10
+// Call the function with variables a, b, c to circularly shift values
+
+/*#include <stdio.h>
+int shift(int *a, int *b, int *c)
+{
+    int temp;
+    temp = *c;
+    *c = *b;
+    *b = *a;
+    *a = temp;
+}
+int main()
+{
+    int a, b, c;
+    printf("Enter the value of A : ");
+    scanf("%d", &a);
+    printf("Enter the value of B : ");
+    scanf("%d", &b);
+    printf("Enter the value of C : ");
+    scanf("%d", &c);
+
+    printf("The numbers Before shifting:\n");
+    printf("A=%d B=%d C=%d\n", a, b, c);
+
+    shift(&a, &b, &c);
+
+    printf("The numbers After shifting:\n");
+    printf("A=%d B=%d C=%d\n", a, b, c);
+
+    return 0;
+}*/
+
+// 76.Write a function to compute the greatest common divisor given by Euclid’s algorithm, exemplified for j = 1980, K = 1617 as follows:-1980 / 1617 = 11980 –1 * 1617 = 3631617 / 363 = 41617 –4 * 363 = 165363 / 165 = 2363 –2 * 165 = 335 / 33 = 5165 –5 * 33 = 0Thus, the greatest common divisor is 33
+
+/*#include <stdio.h>
+void euclidGCD1(int num1, int num)
+{
+    if (num1 <= 1)
+    {
+        return;
+    }
+    else if (num1 % num == 0)
+    {
+        printf("%d\n", num);
+        euclidGCD1(num1 / num, num);
+    }
+    else
+    {
+        euclidGCD1(num1, num + 1);
+    }
+}
+void euclidGCD2(int num2, int num)
+{
+    if (num2 <= 1)
+    {
+        return;
+    }
+    else if (num2 % num == 0)
+    {
+        printf("%d\n", num);
+        euclidGCD2(num2 / num, num);
+    }
+    else
+    {
+        euclidGCD2(num2, num + 1);
+    }
+}
+
+int main()
+{
+    int num1, num2;
+    printf("Enter First number :- ");
+    scanf("%d", &num1);
+    printf("Enter the Second number :- ");
+    scanf("%d", &num2);
+
+    printf("Prime Factors of %d are\n", num1);
+    euclidGCD1(num1, 2);
+    printf("Prime Factors of %d are\n", num2);
+    euclidGCD2(num2, 2);
+
+    return 0;
+}*/
+
+// C program to demonstrate Basic Euclidean Algorithm
+/*#include <stdio.h>
+
+// Function to return gcd of a and b
+int gcd(int a, int b)
+{
+    if (a == 0)
+        return b;
+    return gcd(b % a, a);
+}
+
+// Driver program to test above function
+int main()
+{
+    int a, b;
+    printf("Enter the numbers :- ");
+    scanf("%d %d", &a, &b);
+    printf("GCD(%d, %d) = %d\n", a, b, gcd(a, b));
+    return 0;
+}*/
+
+// pointers
+/*#include <stdio.h>
+
+int main()
+{
+    int a;
+    // pointer which will store address of another variable
+    int *b;
+    // here b is storing the address of a
+    b = &a;
+    // pointer to pointer.
+    int **c;
+    c = &b;
+    printf("Enter the value of A :- ");
+    scanf("%d", &a);
+    // printf("This is the address of the variable A :- << %p >>\n", &a);
+    // printf("The value of A is ((%d))\nwhich i am showing using the < *b > which contains the address of Variable A \n", *b);
+
+    printf("1. This is the value of A :- %d\n", a);   //5
+    printf("2. Address of A stored in B :- %p\n", b); // 0x7ffe499e53c4
+    printf("3. Address of B stored in C:- %p\n", c);  // 5
+    printf("4. Address of the B %p\n", &b);           // 0x7ffe499e53c8
+
+    // B stores the Address of A
+    // *B gives the value of A
+    // C stores the address of B
+    // *C gives the value of B which is Address of A
+    // **C gives the value of A because * points to its address ** points to the address of address and gives the value.
+
+    // printf("We can get the address of A using << &a >> or << b >>\n");
+    // printf("We can get the value of A using << a >> or << *b >>\n");
+    return 0;
+}*/
+
+// 81.Write a program to find out largest element and Second Largest of an array
+/*#include <stdio.h>
+// function to findout the greaterst number from an Array
+int returnMax(int array[], int n)
+{
+    // assigned 0 to variable max will be used further to store the greater value.
+    // int max = 0;
+    int max = 0, largest = 0, second = 0, j;
+    // This loop will check the greater number across Array values
+    if (array[0] > array[1])
+    {
+        largest = array[0];
+        second = array[1];
+    }
+    else
+    {
+        largest = array[1];
+        second = array[0];
+    }
+
+    for (j = 2; j <= n - 1; j++)
+    {
+        if (largest < array[j])
+        {
+            second = largest;
+            largest = array[j];
+        }
+        else if (second < array[j])
+        {
+            second = array[j];
+        }
+    }
+
+    printf("largest :- %d Second :- %d\n", largest, second);
+
+    for (int i = 0; i < n; i++)
+    {
+        printf("The %d value of the Array is %d\n", i, array[i]);
+        // using array[i] we will get the value whose index will be given
+        if (array[i] > max)
+        {
+            max = array[i];
+        }
+    }
+    // the function is returning the value of max after calculation
+    return max;
+}
+int main()
+{
+    int num, n;
+    // Defined that how much values we are going to add in the Array
+    printf("How many elements you want to enter in the array :- ");
+    scanf("%d", &num);
+    // here we defined the array with its size
+    int arr[num];
+    // in this loop we are adding values to the Array
+    for (int i = 0; i <= num - 1; i++)
+    {
+        printf("Enter %d value :-", i);
+        // here the value are adding to the loop desired array index
+        scanf("%d", &arr[i]);
+    }
+    // here we are calling the function which is going to check the greater number.
+    int max = returnMax(arr, num);
+    // here the Greater value will be printed.
+    printf("The greatest in the Array is :- %d\n", max);
+    return 0;
+}*/

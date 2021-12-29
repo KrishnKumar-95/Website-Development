@@ -1,0 +1,15 @@
+{
+  "name": "blog-express",
+  "version": "1.0.0",
+  "description": "This is Blog Project we created during ExpressJS-Tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Krishn-Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "express-handlebars": "^6.0.2",
+    "nodemon": "^2.0.15"
+  }
+}
