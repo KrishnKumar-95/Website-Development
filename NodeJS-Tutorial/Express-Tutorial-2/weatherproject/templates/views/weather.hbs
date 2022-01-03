@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>meta}}
+    {{>implinks}}
+    {{>css}}
+</head>
+<body>
+    {{>navbar}}
+    <div class="main_content">
+        <form class="temp_form">
+            <input type="text" name="cityname" id="cityname" placeholder="Enter City Name" autocomplete="off">
+            <input type="submit" value="Search" id="submitbtn">
+        </form>
+    </div>
+
+    <div class="tempinfo">
+        <div class="top_layer">
+            {{!-- <p id="day">Saturday</p> --}}
+            <p id="today_data">1 Jan 2022</p>
+        </div>
+        <div class="main_layer">
+            <p id="city_name">cityname here</p>
+            <div class="middle_layer">
+                <p id="temp"><span id="temp_val">0</span>°C</p>
+                <p id="temp_status"><i class="fa fa-cloud" aria-hidden="true"></i></p>
+            </div>
+        </div>
+        
+    </div>
+    {{>footer}}
+{{!-- <script src="script.js"></script> --}}
+{{>script}}
+</body>
+</html>

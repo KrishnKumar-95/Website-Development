@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{{>headmeta}}
+</head>
+{{>css}}
+<body>
+    <div class="body-box">
+    {{!-- THIS COMPONENT IS IMPORTED FROM THE PARTIALS FOLDER
+    WE CAN MAKE THIS TYPE OF COMPONENTS WHICH ARE GOING TO REPEAT IN EVERY PAGE
+    WE JUST HAVE TO IMPORT USING FILE NAME LIKE BELOW  {{>FILE-NAME}} --}}
+    {{>header}}
+    <a href="http://localhost:8000/about?name={{name}}&age={{age}}">
+    <h2>http://localhost:8000/about?name={{name}}&age={{age}}</h2>
+    </a>
+    {{aboutmsg}}
+
+    </div>
+
+    {{!-- THIS FOOTER IS IMPORTED SAME AS THE HEADER --}}
+    {{>footer}}
+</body>
+</html>

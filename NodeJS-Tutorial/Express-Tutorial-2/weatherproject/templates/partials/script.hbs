@@ -1,0 +1,144 @@
+<script>
+    const submitbtn = document.getElementById("submitbtn");
+    const cityname = document.getElementById("cityname");
+    const city_name = document.getElementById("city_name");
+    const temp = document.getElementById("temp_val");
+    const temp_status = document.getElementById("temp_status");
+    const today_data = document.getElementById("today_data");
+    const dataHide = document.querySelector(".middle_layer");
+    setInterval(()=>{
+        today_data.innerHTML = new Date()
+    },1000);
+    const getinfo = async(event)=>{
+        event.preventDefault();
+        let cityVal = cityname.value;
+        if(cityVal===""){
+            city_name.innerText = `City Name can't be Empty`;
+            dataHide.classList.add("data_hide");
+        }else{
+            dataHide.classList.remove("data_hide");
+            try{
+            let url = `http://api.openweathermap.org/data/2.5/weather?q=${cityVal}&units=metric&appid=341b8db31951216a51f145e3acc51a45`;
+            const response = await fetch(url);
+            const data = await response.json();
+            city_name.innerText = `${data.name},${data.sys.country}`;
+            temp.innerText = data.main.temp;
+            temp_status.innerText = data.weather[0].main;
+            const tempMood = data.weather[0].main;
+            if(tempMood=="Clear"){
+                temp_status.innerHTML="<i class='fas fa-sun' style='color:#eccc68;'></i>";
+            }else if(tempMood=="Clouds"){
+                temp_status.innerHTML="<i class='fas fa-cloud' style='color:#f1f2f6';></i>";
+            }else if(tempMood=="Rain"){
+                temp_status.innerHTML="<i class='fas fa-cloud-rain' style='color:a4b0be'></i>"
+            }else if(tempMood=="Snow"){
+                    temp_status.innerHTML = "<i class='fas fa-snowflake' aria-hidden='true'></i>";
+            }else{
+                temp_status.innerHTML= "<i class='fas fa-sun' style='color:#f1f2f6';></i>";
+            }
+            }catch{
+                city_name.innerText = `Plz search for correct city name`;
+                dataHide.classList.add("data_hide");
+            }
+        }
+    }
+    submitbtn.addEventListener("click",getinfo);
+</script>
+
+{{!-- 
+<script>
+    // SEARCH BUTTON
+    const submitbtn = document.getElementById("submitbtn");
+
+    // CITY NAME WHICH WILL SEARCH BY USER
+    const cityname = document.getElementById("cityname");
+
+    // CITY NAME WHICH WILL BE DISPLAYED ON WITH TEMPRATURE
+    const city_name = document.getElementById("city_name");
+
+    // TEMRATURE IN DEGREES
+    const temp = document.getElementById("temp_val");
+
+    // EITHER CLOUD OR CLEAR
+    const temp_status = document.getElementById("temp_status");
+
+    // IT DISPLAYS THE DATE & TIME
+    const today_data = document.getElementById("today_data");
+
+    // IT ADDS THE CLASS <<data_hide>> WHICH HIDES THE DATA IF SEARCH BOX IS EMPTY OR IRRELEVANT
+    const dataHide = document.querySelector(".middle_layer");
+
+    // IT AUTOMATICALLY REFRESH THE DATE AFTER SET INTERVAL
+    setInterval(()=>{
+        today_data.innerHTML = new Date()
+    },1000);
+
+    const getinfo = async(event)=>{
+        event.preventDefault();
+
+        // STORING THE VALUE ENTERED IN THE CITYNAME FIELD TO SEARCH FOR CITY TEMPRATURE
+        let cityVal = cityname.value;
+
+        // IF CITY NAME IS EMPTY THE THE MESSAGE WILL BE PRINTED IN THE DOM
+        if(cityVal===""){
+            city_name.innerText = `City Name can't be Empty`;
+
+            // ADDING THE CLASS WHICH HIDES THE TEMPRATURE FOR UNFETCHED CITY
+            dataHide.classList.add("data_hide");
+
+        }else{
+            // REMOVING DATA HIDE CLASS IF THERE IS ANY
+            dataHide.classList.remove("data_hide");
+
+            // TRY-CATCH CONDITION TRY TO FETCH CITYNAME IF THERE IS NO CITYNAME MATCHES THEN ERROR-MSG WILL BE PRINTED IN CATCH
+            try{
+            let url = `http://api.openweathermap.org/data/2.5/weather?q=${cityVal}&units=metric&appid=341b8db31951216a51f145e3acc51a45`;
+
+            // IT WAITS UNTIL THE DATA WILL BE FETCHED
+            const response = await fetch(url);
+
+            // DATA WILL BE CONVERTED TO JSON FORMAT
+            const data = await response.json();
+
+            // THEN THE DATA WILL BE CONVERTED TO ARRAY
+
+            // CITY NAME AND COUNTRY
+            city_name.innerText = `${data.name},${data.sys.country}`;
+
+            // TEMPRATURE OF THAT CITY
+            temp.innerText = data.main.temp;
+
+            // TEMPRATURE STATUS >> CLOUDS, RAIN ETC
+            temp_status.innerText = data.weather[0].main;
+
+            const tempMood = data.weather[0].main;
+            if(tempMood=="Clear"){
+                // CLEAR SUN
+                temp_status.innerHTML="<i class='fas fa-sun' style='color:#eccc68;'></i>";
+
+            }else if(tempMood=="Clouds"){
+                // CLOUDS
+                temp_status.innerHTML="<i class='fas fa-cloud' style='color:#f1f2f6';></i>";
+
+            }else if(tempMood=="Rain"){
+                // RAIN
+                temp_status.innerHTML="<i class='fas fa-cloud-rain' style='color:a4b0be'></i>"
+
+            }else{
+                // DEFAULT
+                temp_status.innerHTML= "<i class='fas fa-sun' style='color:#f1f2f6';></i>";
+
+            }
+
+            }catch{
+                city_name.innerText = `Plz search for correct city name`;
+                dataHide.classList.add("data_hide");
+            }
+
+        }
+    }
+    // CALLING THE CALLBACK FUNCTION ON CLICK OF SUBMIT BUTTON
+    submitbtn.addEventListener("click",getinfo);
+</script>
+
+            const arrData = [data];  56 --}}
