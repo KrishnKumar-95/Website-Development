@@ -1,16 +1,17 @@
 {
-  "name": "weatherproject",
-  "version": "1.0.0",
-  "description": "This project is to show weather information of all indian cities",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Krishn kumar",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.2",
-    "hbs": "^4.2.0",
-    "open": "^8.4.0"
-  }
+    "name": "weatherproject",
+    "version": "1.0.0",
+    "description": "This project is to show weather information of all indian cities",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node src/app.js"
+    },
+    "author": "Krishn kumar",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.2",
+        "hbs": "^4.2.0",
+        "open": "^8.4.0"
+    }
 }
