@@ -1,0 +1,30 @@
+<script>
+    const deletebtn = document.getElementById("delete");
+    const inputId = document.getElementById("id");
+    const msg = document.getElementById("msg");
+
+    const delData = async(event)=>{
+        console.log("Reached at this point...");
+        event.preventDefault();
+        let inputIdVal = inputId.value;
+        if(inputIdVal ==""){
+            msg.innerText = `ID cannot be Empty...`;
+        }else{
+            try{
+                let url = `http://localhost:3000/students/delete/${inputIdVal}`;
+                let response = await fetch(url,{
+                    method:'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                .then(()=>{
+                    msg.innerText = `Deleted Sucessfully`;
+                });
+            }catch(err){
+                msg.innerText = `Something went wrong`+err;
+                }
+        }
+    }
+    deletebtn.addEventListener("click",delData);
+</script>

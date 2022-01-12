@@ -1,0 +1,33 @@
+<script>
+    const submitbtn = document.getElementById("submit");
+    // TEXT FIELD
+    const email = document.getElementById("email");
+    // ENTER NAME TO BE CHANGED
+    const name = document.getElementById("name");
+    const msg = document.getElementById("msg");
+
+    const getInfo = async(event)=>{
+        event.preventDefault();
+        let emailVal = email.value;
+        let nameVal = name.value;
+        console.log(emailVal);
+        if(emailVal== ""){
+            msg.innerText = `Both fields are required can't be Empty`;
+        }else{
+            try{
+        let url = `http://localhost:3000/students/update/${emailVal}/${nameVal}`;
+        let response = await fetch(url,{
+            headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json"
+            },
+            method:"PATCH",
+        })
+            }catch(err){
+                msg.innerText = `Error occured can't update the value`;
+                console.log(err);
+            }
+        }
+    }
+    submitbtn.addEventListener("click",getInfo);
+</script>

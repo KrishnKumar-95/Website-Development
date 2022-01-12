@@ -1,0 +1,36 @@
+<script>
+    const submitbtn = document.getElementById("submit");
+    // Input Field
+    const phone = document.getElementById("phone");
+    const name = document.getElementById("st-name");
+    const email = document.getElementById("st-email");
+    // Where Data will be shown
+    const _phone = document.getElementById("st-phone");
+    const address = document.getElementById("st-address");
+    const msg = document.getElementById("msg");
+
+    const getVal = async(event)=>{
+        event.preventDefault();
+        let phoneValue = phone.value;
+        if(phoneValue==""){
+            msg.innerText = `Phone Number can't be empty if you want to search your data.`;
+        }else{
+            // ERROR HANDLING USING TRY-CATCH
+            try{
+                let url = `http://localhost:3000/students/search/${phoneValue}`;
+                let response = await fetch(url);
+                const data = await response.json();
+
+                // SENDING DATA TO THE HTML DOM
+                name.innerText = `${data[0].name}`;
+                email.innerText = `${data[0].email}`;
+                _phone.innerText = `${data[0].phone}`;
+                address.innerText = `${data[0].address}`;
+
+            }catch{
+                msg.innerText = `Something went wrong can't fetch data`;
+            }
+        }
+    }
+    submitbtn.addEventListener("click",getVal);
+</script>

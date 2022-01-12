@@ -1,0 +1,17 @@
+<script>
+    const darkmode = document.querySelector(".search-body");
+    const darkbtn = document.getElementById("dark-btn");
+    const lightbtn = document.getElementById("light-btn");
+
+    const darkfunction = (event)=>{
+        event.preventDefault();
+        darkmode.classList.add("dark-body");
+    }
+
+    const lightfunction = (event)=>{
+        event.preventDefault();
+        darkmode.classList.remove("dark-body");
+    }
+    darkbtn.addEventListener("click",darkfunction);
+    lightbtn.addEventListener("click",lightfunction);
+</script>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Delete Student Data</title>
+</head>
+<body class="body">
+    <div class="search-body">
+    <h1>Delete Student Data</h1>
+    <div class="search-container">
+        <div class="sr-form-container">
+            <form id="sr-form-container">
+                <input type="text" id="id" placeholder="Enter your ID">
+                <input type="submit" value="Delete" id="delete">
+            </form>
+        </div>
+
+        {{!-- BUTTONS FOR LIGHT OR DARK-MODE --}}
+        <div class="display-buttons">
+
+        <button id="dark-btn">Dark Mode</button>
+        <button id="light-btn">Light Mode</button>
+
+        </div>
+        <div id="msg"></div>
+
+    <div class="student-data">
+        <div class="item">
+            <div>Student Name :-&emsp;</div>
+            <div id="st-name"></div>
+        </div>
+        <div class="item">
+            <div>Email :-&emsp;&emsp;&emsp;&emsp;&nbsp;</div>
+            <div id="st-email"></div>
+        </div>
+        <div class="item">
+            <div>Phone :-&emsp;&emsp;&emsp;&emsp;&nbsp;</div>
+            <div id="st-phone"></div>
+        </div>
+        <div class="item">
+            <div>Address :-&emsp;&emsp;&emsp;&nbsp;</div>
+            <div id="st-address"></div>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+{{!-- JAVASCRIPT FILE --}}
+{{>deleteScript}}
+
+{{!-- DARK&LIGHT MODE --}}
+{{>darkLightMode}}
+
+</html>
