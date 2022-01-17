@@ -1,16 +1,21 @@
 // REQUIRED MODULES
 const express = require("express");
 const path = require("path");
+const hbs = require("hbs");
 const fs = require("fs");
 const PDFDocument = require('pdfkit');
-const hbs = require("hbs");
+
+const Student = require("./models/students");
+const { fontSize } = require("pdfkit");
+const { Console } = require("console");
 const app = express();
 
 // REQUIRING THE MONGOOSE CONNECTION
 require("./db/conn");
-const Student = require("./models/students");
-const { fontSize } = require("pdfkit");
-const { Console } = require("console");
+
+// const Student = require("./models/students");
+// const { fontSize } = require("pdfkit");
+// const { Console } = require("console");
 
 // PORT
 const port = process.env.PORT || 3000;
@@ -30,7 +35,6 @@ app.set("view engine", "hbs");
 // MIDDLEWARE TO RECOGNIZE THE INCOMING REQUEST OBJECT IS JSON OBJECT
 app.use(express.json());
 
-
 ///////////////////////////////////////////////////////////////////////////////////////////
 // MAKING PDF OF THE DATA
 function createInvoice(invoice, path) {
@@ -40,7 +44,7 @@ function createInvoice(invoice, path) {
     generateHeader(doc);
     generateCustomerInformation(doc, invoice);
     generateFooter(doc);
-
+    console.log('createInvoice');
     doc.end();
     doc.pipe(fs.createWriteStream(path));
 }
@@ -49,7 +53,6 @@ let date = new Date();
 
 function generateHeader(doc) {
     doc.text(`${date}`, 50, 10, { align: 'center', width: 500 })
-        .image("image.png", 10, 45, { width: 50 })
         .fontSize(18)
         .text('RadSack Fresh Fruits & Vegetables', 70, 57)
         .fontSize(14)
@@ -197,8 +200,13 @@ app.delete("/students/delete/:phone", async(req, res) => {
 
 // PAGE TO DELETE THE DATA FROM DATABASE
 app.get("/delete", (req, res) => {
-    res.status(200).render("delete")
-})
+    res.status(200).render("delete");
+});
+
+// SHOW ALL THE DATA IN TABLE
+app.get("/allstudents", (req, res) => {
+    res.status(200).render("allstudents");
+});
 
 // LISTENING ON DESIRED PORT
 app.listen(port, () => {

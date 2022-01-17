@@ -1,0 +1,11 @@
+{
+    "name": "mydictionary",
+    "version": "1.0.0",
+    "description": "This is merriam-webster-dictionary which i am modifying",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "KrishnKumar",
+    "license": "ISC"
+}

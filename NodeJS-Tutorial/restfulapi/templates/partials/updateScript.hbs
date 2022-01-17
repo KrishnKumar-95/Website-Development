@@ -22,6 +22,8 @@
                 "Content-Type": "application/json"
             },
             method:"PATCH",
+        }).then(()=>{
+            msg.innerText = `Updated Successfully`;
         })
             }catch(err){
                 msg.innerText = `Error occured can't update the value`;
