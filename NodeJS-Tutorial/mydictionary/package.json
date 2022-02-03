@@ -4,8 +4,16 @@
     "description": "This is merriam-webster-dictionary which i am modifying",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "nodemon src/app.js -e js,css,hbs"
     },
     "author": "KrishnKumar",
-    "license": "ISC"
+    "license": "ISC",
+    "dependencies": {
+        "bcryptjs": "^2.4.3",
+        "express": "^4.17.2",
+        "hbs": "^4.2.0",
+        "mongoose": "^6.1.7",
+        "validator": "^13.7.0"
+    }
 }

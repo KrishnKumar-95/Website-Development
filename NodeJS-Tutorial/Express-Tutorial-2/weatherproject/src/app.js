@@ -4,7 +4,7 @@ const hbs = require("hbs");
 const app = express();
 
 // WE ONLY USE AT THE TIME OF HOSTING ONLINE
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8000;
 
 const TemplateEnginePath = path.join(__dirname, "../templates/views");
 app.set("views", TemplateEnginePath);

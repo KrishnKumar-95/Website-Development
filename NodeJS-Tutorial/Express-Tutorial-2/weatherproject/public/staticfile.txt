@@ -1,0 +1,3 @@
+These are static files which are shared directly
+
+
