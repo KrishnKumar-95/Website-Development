@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import React,{useState,useEffect} from "react"
+import React,{useState,useEffect, useReducer} from "react"
 import { useNavigate } from "react-router-dom"
 import "./navbar.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -24,12 +24,14 @@ export const Navbar = ()=>{
     }
 
     useEffect(()=>{
-        localStorage.getItem("UserName") && setName(true)
-    },[name])
-
-    useEffect(()=>{
-        localStorage.getItem("UserID")!==null &&  setUserCheck(false)
-    },[userCheck])
+        // console.log(localStorage.getItem("UserName"));
+        if(localStorage.getItem("UserID")) {
+            setName(true) 
+            setUserCheck(false)
+        }
+        // localStorage.getItem("UserName") && setName(true)
+        // localStorage.getItem("UserID")!==null &&  setUserCheck(false)
+    },[localStorage.getItem("UserID")])
 
     const btnToLogin = ()=>{
         navigate("/login")

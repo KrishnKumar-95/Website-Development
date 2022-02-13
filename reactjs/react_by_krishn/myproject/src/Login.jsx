@@ -5,6 +5,9 @@ import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faWarning, faQuestionCircle } from '@fortawesome/free-solid-svg-icons'
 
+import { Navbar } from "./Navbar";
+import { Header } from "./Header";
+
 export const Login = ()=>{
 
     //Icons
@@ -67,6 +70,9 @@ export const Login = ()=>{
     const wrongPassMsgnotFound = <h3 style={wrongPassStyle}>{notFound}  &nbsp;&nbsp;&nbsp;&nbsp;  User not found click on signup first <button style={tosignupBtn} onClick={toSignup}>Signup</button></h3>
 
     return (
+        <div>
+            <Navbar/>
+            <Header/>
         <div style={mainDiv}>
             {/* Loader until login */}
             {loading && <Watch heigth="100" width="100" color="#a866c4" ariaLabel='loading'/>}
@@ -107,6 +113,7 @@ export const Login = ()=>{
                 </form>
             </div>
         </div>
+    </div>
     )
 }
 

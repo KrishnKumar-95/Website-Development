@@ -1,12 +1,15 @@
 import React,{useState,useEffect} from 'react';
 // import {Count} from './Count'
+import DelFunc from './DelFunc';
 
 export const Todo = () => {
 
-    // TO STORE THE ITEMS IN LOCALSTORAGE
+    // TO RETRIEVE THE STORED ITEMS FROM LOCALSTORAGE
     let initTodo;
+    // << .getitem >> THROWS EITHER STORED DATA OR NULL
+    // IF IT THROWS NULL THEN THE initTodo WILL SET TO EMPTY ARRAY
     if(localStorage.getItem("todos")===null){
-        initTodo= {item:[]}
+        initTodo = {item:[]}
     }else{
         initTodo = JSON.parse(localStorage.getItem("todos"));
     }
@@ -38,16 +41,14 @@ export const Todo = () => {
                 setTodo("")
                 return alert("Already Exists")
             }else {
-
                 const time = new Date().toLocaleTimeString()
                 console.log(time)
                 _todos.push(todo)
-                // console.log(_todos.length)
+                console.log({...todos})
                 setTodos({...todos,item:_todos});
                 // SET TODO TO EMPTY VALUE
                 setTodo("")
             }
-
         }
     }
     
@@ -90,12 +91,13 @@ export const Todo = () => {
                     {/* HERE WE ARE PASSING TWO PARAMETERS Item and index ITEM IS THE ELEMENT OF THE ARRAY AND INDEX IS THE RELATED INDEX NUMBER OF THAT ELEMENT */}
                     {todos.item.length===0?"No Todos to display":todos.item.map((item,index)=>{
                         return (
-                            <>
-                                <li key={item.index} style={boxStyle}>{item}
-                                <button style={boxStyle} onClick={()=>{onDelete(index)}}>Delete</button>
+                            <div key={index}>
+                                <li style={boxStyle}>{item}
+                                {/* <button style={boxStyle} onClick={()=>{onDelete(index)}}>Delete</button> */}
+                                <DelFunc style={boxStyle} delete={onDelete} />
                                 </li>
                             <hr/>
-                            </>
+                            </div>
                         ) 
                     })}
                 </div>

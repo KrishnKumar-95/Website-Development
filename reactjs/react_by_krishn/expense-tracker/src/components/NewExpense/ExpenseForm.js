@@ -50,7 +50,10 @@ const ExpenseForm = ()=>{
             date: new Date(enteredDate)
         };
        
+        // LOGGING IN THE CONSOLE
         console.log(expenseData);
+
+        // NOW WE ARE SETTING IT BACK TO ITS PREVIOUS STATE IN WHICH ITS VALUE IS EMPTY STRING TO EMPTY THE INPUT FIELDS OF THE EXPENSE TRACKER APP
         setenteredTitle("");
         setenteredAmount("");
         setenteredDate("");

@@ -29,9 +29,10 @@ app.post('/login',async(req,res) => {
         }else if(getUser){
             const userPass = getUser.password;
             const userName = getUser.name;
+            const userTodos = getUser.todos;
             if(enteredPassword===userPass){
                 // here << code=1 >> is to compare that user is logged in or not
-                return res.json({code:1,msg: `User Found and Login Successful`,userid:getUser._id,name:userName})
+                return res.json({code:1,msg: `User Found and Login Successful`,userid:getUser._id,name:userName,todos: userTodos})
             }else{
                 return res.json({code:-1,msg: `You entered Wrong Password`})
             }

@@ -2,8 +2,11 @@ import './App.css';
 import Header from './MyComponents/Header';
 import {Todos} from './MyComponents/Todos';
 import {Footer} from './MyComponents/Footer';
-import React, { useState } from 'react';
+import React, { useState ,createContext} from 'react';
 import { Addtodo } from './MyComponents/Addtodo';
+import Reducer from './Reducer';
+
+export const UserContext = createContext()
 
 function App() {
 
@@ -64,10 +67,13 @@ function App() {
   ]);
   return (
     <>
-      <Header title="MyTodoList"/>
+      {/* <Header title="MyTodoList"/>
       <Addtodo addTodo={addTodo}/>
-      <Todos todos={todos} onDelete={onDelete}/>
-      <Footer />
+      <UserContext.Provider value={['aman','amit']}>
+        <Todos todos={todos} onDelete={onDelete}/>
+      </UserContext.Provider>
+      <Footer /> */}
+      <Reducer />
     </>
   );
 }

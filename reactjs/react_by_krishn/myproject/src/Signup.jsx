@@ -2,6 +2,8 @@ import { useState,useEffect } from "react"
 import axios from 'axios'
 import { Watch } from  'react-loader-spinner'
 import { useNavigate } from "react-router-dom";
+import { Header } from "./Header";
+import { Navbar } from "./Navbar";
 
 
 export const Signup = ()=>{
@@ -50,6 +52,9 @@ export const Signup = ()=>{
     }
 
     return (
+        <div>
+        <Navbar/>
+        <Header/>
         <div style={mainDiv}>
             <h2>Signup Form</h2>
             <div style={inputFields}>
@@ -63,6 +68,7 @@ export const Signup = ()=>{
                     <input type="submit" style={submitBtn} value="Signup"/>
                 </form>
             </div>
+        </div>
         </div>
     )
 }

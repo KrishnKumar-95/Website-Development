@@ -2,6 +2,8 @@ import axios from 'axios';
 import React,{useEffect, useState,useRef} from 'react'
 import { Watch } from  'react-loader-spinner'
 import { useNavigate } from "react-router-dom";
+import { Header } from './Header';
+import { Navbar } from './Navbar';
 import './todo.css';
 const Todo = ()=>{
     let navigate = useNavigate();
@@ -118,6 +120,9 @@ const Todo = ()=>{
     }
 
     return (
+        <div>
+            <Navbar/>
+            <Header/>
         <div style={mainDiv}>
             <form onSubmit={submitForm}>
                 <h2> Todo Maker </h2>
@@ -164,6 +169,7 @@ const Todo = ()=>{
                         </div>
                     )})}
                 </div>
+        </div>
         </div>
     )
 }

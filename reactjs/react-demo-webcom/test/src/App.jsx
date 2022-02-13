@@ -3,6 +3,7 @@ import {Fun1,Fun2} from  './Contact'
 // import './App.css'
 import Form from './Form'
 import TODO from './TODO'
+import Nesting from './Nesting'
 
 import {
     BrowserRouter as Router,
@@ -109,6 +110,7 @@ const App = () => {
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="contact" element={<Contact />} />
+                        <Route path="Nesting" element={<Nesting />} />
                         <Route path="page" element={<Page />} >
                             <Route path=":id" element={<Page />} />
                         </Route>
